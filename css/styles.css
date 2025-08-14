@@ -27,17 +27,17 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
     font-size: 2.5rem;
-    color: #2c5f41;
+    color: #8B5A9F;
 }
 
 h2 {
     font-size: 2rem;
-    color: #2c5f41;
+    color: #8B5A9F;
 }
 
 h3 {
     font-size: 1.5rem;
-    color: #2c5f41;
+    color: #8B5A9F;
 }
 
 p {
@@ -66,7 +66,7 @@ p {
 }
 
 .nav-logo h2 {
-    color: #2c5f41;
+    color: #8B5A9F;
     margin: 0;
     font-size: 1.8rem;
 }
@@ -84,7 +84,7 @@ p {
 }
 
 .nav-link:hover {
-    color: #7fb069;
+    color: #D196E0;
 }
 
 .hamburger {
@@ -104,7 +104,7 @@ p {
 /* Hero Section */
 .hero {
     padding: 120px 0 80px;
-    background: linear-gradient(135deg, #f8fffe 0%, #e8f5e8 100%);
+    background: linear-gradient(135deg, #E2C4FF 0%, #F5E6FF 50%, #FFE6F0 100%);
     display: flex;
     align-items: center;
     min-height: 80vh;
@@ -159,23 +159,23 @@ p {
 }
 
 .btn-primary {
-    background: #7fb069;
+    background: #D196E0;
     color: white;
 }
 
 .btn-primary:hover {
-    background: #6a9654;
+    background: #B76BC8;
     transform: translateY(-2px);
 }
 
 .btn-secondary {
     background: transparent;
-    color: #7fb069;
-    border: 2px solid #7fb069;
+    color: #D196E0;
+    border: 2px solid #D196E0;
 }
 
 .btn-secondary:hover {
-    background: #7fb069;
+    background: #D196E0;
     color: white;
 }
 
@@ -185,7 +185,7 @@ p {
 }
 
 .bg-light {
-    background: #f8f9fa;
+    background: linear-gradient(135deg, #F5E6FF 0%, #FFE6F0 100%);
 }
 
 .section-title {
@@ -238,7 +238,7 @@ p {
 
 .service-icon {
     font-size: 3rem;
-    color: #7fb069;
+    color: #D196E0;
     margin-bottom: 1rem;
 }
 
@@ -255,7 +255,7 @@ p {
     text-align: center;
     margin-bottom: 2rem;
     font-size: 1.8rem;
-    color: #2c5f41;
+    color: #8B5A9F;
 }
 
 .testimonials-grid {
@@ -269,7 +269,7 @@ p {
     padding: 2rem;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    border-left: 4px solid #7fb069;
+    border-left: 4px solid #D196E0;
 }
 
 .testimonial-card p {
@@ -280,7 +280,7 @@ p {
 
 .testimonial-card cite {
     font-weight: 600;
-    color: #2c5f41;
+    color: #8B5A9F;
     font-style: normal;
 }
 
@@ -317,27 +317,61 @@ p {
     gap: 2rem;
 }
 
+.recipe-category-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
 .recipe-category {
     background: white;
     padding: 2rem;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     text-align: center;
-    transition: transform 0.3s ease;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: 2px solid transparent;
 }
 
 .recipe-category:hover {
-    transform: translateY(-5px);
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    border-color: #D196E0;
+}
+
+.recipe-icon {
+    font-size: 3rem;
+    color: #D196E0;
+    margin-bottom: 1.5rem;
 }
 
 .recipe-category h3 {
-    color: #7fb069;
+    color: #8B5A9F;
     margin-bottom: 1rem;
+    font-size: 1.4rem;
+}
+
+.recipe-category p {
+    color: #666;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+
+.recipe-count {
+    display: inline-block;
+    background: linear-gradient(135deg, #E2C4FF 0%, #F5E6FF 100%);
+    color: #8B5A9F;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-top: 0.5rem;
 }
 
 /* Newsletter Section */
 .newsletter-section {
-    background: #2c5f41;
+    background: linear-gradient(135deg, #8B5A9F 0%, #B76BC8 100%);
     color: white;
     padding: 60px 0;
     text-align: center;
@@ -372,6 +406,7 @@ p {
 .discount-section {
     padding: 60px 0;
     text-align: center;
+    background: linear-gradient(135deg, #F5E6FF 0%, #E2C4FF 100%);
 }
 
 .donation-button {
@@ -395,7 +430,7 @@ p {
 }
 
 .contact-info a {
-    color: #7fb069;
+    color: #D196E0;
     text-decoration: none;
 }
 
@@ -424,12 +459,12 @@ p {
 .form-group input:focus,
 .form-group textarea:focus {
     outline: none;
-    border-color: #7fb069;
+    border-color: #D196E0;
 }
 
 /* Footer */
 .footer {
-    background: #2c5f41;
+    background: linear-gradient(135deg, #8B5A9F 0%, #6D4C7D 100%);
     color: white;
     padding: 60px 0 20px;
 }
@@ -475,7 +510,7 @@ p {
     display: inline-block;
     width: 40px;
     height: 40px;
-    background: #7fb069;
+    background: #D196E0;
     border-radius: 50%;
     text-align: center;
     line-height: 40px;
@@ -484,11 +519,11 @@ p {
 }
 
 .social-links a:hover {
-    background: #6a9654;
+    background: #F4A3E8;
 }
 
 .footer-bottom {
-    border-top: 1px solid #4a7a5a;
+    border-top: 1px solid #A86BB5;
     padding-top: 2rem;
     display: flex;
     justify-content: space-between;

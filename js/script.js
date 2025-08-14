@@ -314,7 +314,7 @@ document.addEventListener('DOMContentLoaded', () => {
 // Add active navigation link styles
 const activeNavStyles = `
     .nav-link.active {
-        color: #7fb069;
+        color: #D196E0;
         font-weight: 600;
     }
 `;
