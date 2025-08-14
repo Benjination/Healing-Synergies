@@ -135,6 +135,21 @@ p {
     width: 100%;
 }
 
+.family-image {
+    text-align: center;
+    margin-bottom: 2rem;
+    width: 100%;
+    padding: 0 20px;
+}
+
+.family-img {
+    max-width: 800px;
+    height: auto;
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
 .hero-content {
     max-width: 1200px;
     margin: 0 auto;
@@ -290,6 +305,61 @@ p {
     border-color: #D196E0;
 }
 
+.swedish-massage-card {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url('../images/massage-stock.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.swedish-massage-card:hover {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url('../images/massage-stock.jpeg');
+}
+
+.infinite-oneness-card {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url('../images/HealingHands.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.infinite-oneness-card:hover {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url('../images/HealingHands.jpeg');
+}
+
+.qigong-massage-card {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url('../images/qigong-massage.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.qigong-massage-card:hover {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url('../images/qigong-massage.png');
+}
+
+.cranio-sacral-card {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url('../images/cranio-sacral.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.cranio-sacral-card:hover {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url('../images/cranio-sacral.jpg');
+}
+
+.raw-food-card {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url('../images/raw-food-retreat.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.raw-food-card:hover {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url('../images/raw-food-retreat.jpg');
+}
+
 .service-icon {
     font-size: 3rem;
     color: #D196E0;
@@ -336,6 +406,21 @@ p {
     font-weight: 600;
     color: #8B5A9F;
     font-style: normal;
+}
+
+/* ARCH Testimonial Image */
+.arch-image-container {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.arch-testimonial-image {
+    max-width: 400px;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(139, 90, 159, 0.3);
+    border: 3px solid #D196E0;
 }
 
 /* Gallery Section */
@@ -670,6 +755,10 @@ p {
     
     .testimonials-grid {
         grid-template-columns: 1fr;
+    }
+    
+    .arch-testimonial-image {
+        max-width: 300px;
     }
     
     .recipes-grid {
