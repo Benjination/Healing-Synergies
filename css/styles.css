@@ -65,6 +65,17 @@ p {
     height: 70px;
 }
 
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.nav-logo-img {
+    height: 40px;
+    width: auto;
+}
+
 .nav-logo h2 {
     color: #8B5A9F;
     margin: 0;
@@ -118,6 +129,17 @@ p {
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
     align-items: center;
+}
+
+.hero-logo {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.hero-logo-img {
+    max-width: 200px;
+    height: auto;
+    margin-bottom: 1rem;
 }
 
 .hero-content h1 {
@@ -376,6 +398,17 @@ p {
     background: linear-gradient(135deg, #F5E6FF 0%, #E2C4FF 100%);
 }
 
+.section-logo-accent {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.section-accent-img {
+    height: 60px;
+    width: auto;
+    opacity: 0.7;
+}
+
 .donation-button {
     margin-top: 2rem;
 }
@@ -441,6 +474,18 @@ p {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
     margin-bottom: 2rem;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.footer-logo-img {
+    height: 35px;
+    width: auto;
 }
 
 .footer-section h3,
@@ -515,6 +560,28 @@ p {
         display: flex;
     }
     
+    .nav-logo-img {
+        height: 35px;
+    }
+    
+    .nav-logo h2 {
+        font-size: 1.5rem;
+    }
+    
+    .hero-logo-img {
+        max-width: 150px;
+    }
+    
+    .footer-logo {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.5rem;
+    }
+    
+    .section-accent-img {
+        height: 45px;
+    }
+    
     .nav-menu {
         position: fixed;
         left: -100%;
@@ -570,6 +637,18 @@ p {
 }
 
 @media (max-width: 480px) {
+    .nav-logo-img {
+        height: 30px;
+    }
+    
+    .nav-logo h2 {
+        font-size: 1.3rem;
+    }
+    
+    .hero-logo-img {
+        max-width: 120px;
+    }
+    
     .hero-content h1 {
         font-size: 1.8rem;
     }
