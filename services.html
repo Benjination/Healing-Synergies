@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services & Pricing - Healing Synergies | Dallas/Fort Worth, TX</title>
+    <meta name="description" content="Professional healing services including Swedish Massage, Ancient Rainbow Conscious Healing, Qigong Massage, Cranio Sacral Therapy, and Raw Food Retreats in Dallas/Fort Worth, TX.">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/services.css">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="images/healing-logo.png" alt="Healing Synergies" class="nav-logo-img" />
+                <h2>Healing Synergies</h2>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="index.html#about" class="nav-link">About</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="index.html#testimonials" class="nav-link">Testimonials</a>
+                <a href="index.html#gallery" class="nav-link">Gallery</a>
+                <a href="index.html#recipes" class="nav-link">Recipes</a>
+                <a href="index.html#contact" class="nav-link">Contact</a>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Services Hero Section -->
+    <section class="services-hero">
+        <div class="container">
+            <div class="services-hero-content">
+                <h1>Professional Healing Services</h1>
+                <p>Experience transformative healing through our comprehensive range of therapeutic services designed to restore balance and promote wellness.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Pricing Section -->
+    <section class="services-pricing section">
+        <div class="container">
+            <h2 class="section-title">Services & Pricing</h2>
+            <div class="pricing-grid">
+                
+                <!-- Swedish Massage -->
+                <div class="pricing-card">
+                    <div class="service-icon">
+                        <i class="fas fa-spa"></i>
+                    </div>
+                    <h3>Swedish Massage</h3>
+                    <p class="service-description">Therapeutic massage services to promote healing, relaxation, and muscle tension relief through traditional Swedish massage techniques.</p>
+                    <div class="price">$75</div>
+                    <div class="session-info">Per Session</div>
+                    <button class="btn btn-primary book-btn" onclick="openBookingModal('Swedish Massage')">Book Now</button>
+                </div>
+
+                <!-- Infinite Oneness/Ancient Rainbow Conscious Healing -->
+                <div class="pricing-card">
+                    <div class="service-icon">
+                        <i class="fas fa-rainbow"></i>
+                    </div>
+                    <h3>Infinite Oneness/Ancient Rainbow Conscious Healing</h3>
+                    <p class="service-description">Transformative energy healing modality for spiritual and emotional well-being, promoting deep healing and consciousness expansion.</p>
+                    <div class="price">$75</div>
+                    <div class="session-info">Per Session</div>
+                    <button class="btn btn-primary book-btn" onclick="openBookingModal('Infinite Oneness/Ancient Rainbow Conscious Healing')">Book Now</button>
+                </div>
+
+                <!-- Qigong Massage -->
+                <div class="pricing-card">
+                    <div class="service-icon">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <h3>Qigong Massage</h3>
+                    <p class="service-description">Ancient healing technique combining massage with energy work, promoting circulation, balance, and overall vitality.</p>
+                    <div class="price">$75</div>
+                    <div class="session-info">Per Session</div>
+                    <button class="btn btn-primary book-btn" onclick="openBookingModal('Qigong Massage')">Book Now</button>
+                </div>
+
+                <!-- Cranio Sacral Therapy -->
+                <div class="pricing-card">
+                    <div class="service-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>Cranio Sacral Therapy</h3>
+                    <p class="service-description">Gentle therapy focusing on the craniosacral system for deep healing, stress relief, and nervous system balance.</p>
+                    <div class="price">$75</div>
+                    <div class="session-info">Per Session</div>
+                    <button class="btn btn-primary book-btn" onclick="openBookingModal('Cranio Sacral Therapy')">Book Now</button>
+                </div>
+
+                <!-- Raw Food Retreats -->
+                <div class="pricing-card special">
+                    <div class="service-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>Raw Food Retreats</h3>
+                    <p class="service-description">Immersive experiences in raw food preparation and healthy lifestyle practices, designed to transform your relationship with food and health.</p>
+                    <div class="price">Contact for Pricing</div>
+                    <div class="session-info">Custom Programs</div>
+                    <button class="btn btn-primary book-btn" onclick="openBookingModal('Raw Food Retreats')">Contact Us</button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Modal -->
+    <div id="bookingModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeBookingModal()">&times;</span>
+            <h2>Book Your Session</h2>
+            <p id="selectedService">Selected Service: </p>
+            <form action="https://formspree.io/f/xrbldlew" method="POST" class="booking-form">
+                <div class="form-group">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" name="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <input type="tel" name="phone" placeholder="Your Phone" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" name="preferred-date" placeholder="Preferred Date/Time">
+                </div>
+                <div class="form-group">
+                    <textarea name="message" placeholder="Additional Notes or Questions" rows="4"></textarea>
+                </div>
+                <input type="hidden" name="service" id="serviceInput" value="">
+                <input type="hidden" name="_subject" value="New Service Booking from Healing Synergies Website">
+                <button type="submit" class="btn btn-primary">Send Booking Request</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="images/healing-logo.png" alt="Healing Synergies Logo" class="footer-logo-img" />
+                        <h3>Healing Synergies</h3>
+                    </div>
+                    <p>Your partner in holistic health and wellness.</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/profile.php?id=100063490456216" target="_blank" aria-label="Facebook">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@jonsuzedmonson" target="_blank" aria-label="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="index.html#gallery">Gallery</a></li>
+                        <li><a href="index.html#recipes">Recipes</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p><a href="tel:8179969961">(817) 996-9961</a></p>
+                    <p><a href="mailto:healingsynergies@gmail.com">healingsynergies@gmail.com</a></p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Healing Synergies - All Rights Reserved.</p>
+                <div class="footer-links">
+                    <a href="#privacy">Privacy Policy</a>
+                    <a href="#terms">Terms and Conditions</a>
+                </div>
+                <p class="design-credit">Design by <a href="https://BenjaminNiccum.com" target="_blank">Alma de la Machina</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/services.js"></script>
+</body>
+</html>
