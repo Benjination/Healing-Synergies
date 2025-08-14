@@ -277,6 +277,79 @@
     padding: 15px 30px;
 }
 
+/* Recipe Navigation */
+.recipe-navigation {
+    padding: 60px 0;
+    background: white;
+}
+
+.recipe-navigation h2 {
+    text-align: center;
+    color: #8B5A9F;
+    margin-bottom: 3rem;
+    font-size: 2rem;
+}
+
+.recipe-nav-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.recipe-nav-card {
+    background: linear-gradient(135deg, #F5E6FF 0%, #E2C4FF 100%);
+    padding: 2rem 1.5rem;
+    border-radius: 15px;
+    text-align: center;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.recipe-nav-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    border-color: #D196E0;
+    background: linear-gradient(135deg, #E2C4FF 0%, #D196E0 100%);
+}
+
+.recipe-nav-card:hover h3,
+.recipe-nav-card:hover p {
+    color: white;
+}
+
+.recipe-nav-card:hover .recipe-nav-icon i {
+    color: white;
+}
+
+.recipe-nav-icon {
+    margin-bottom: 1rem;
+}
+
+.recipe-nav-icon i {
+    font-size: 2.5rem;
+    color: #8B5A9F;
+    transition: color 0.3s ease;
+}
+
+.recipe-nav-card h3 {
+    color: #8B5A9F;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.recipe-nav-card p {
+    color: #666;
+    font-size: 0.9rem;
+    margin: 0;
+    transition: color 0.3s ease;
+}
+
 /* Navigation Logo Link */
 .nav-logo a {
     text-decoration: none;
@@ -314,6 +387,27 @@
     .recipe-tips {
         padding: 2rem;
     }
+    
+    .recipe-nav-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 1rem;
+    }
+    
+    .recipe-nav-card {
+        padding: 1.5rem 1rem;
+    }
+    
+    .recipe-nav-icon i {
+        font-size: 2rem;
+    }
+    
+    .recipe-nav-card h3 {
+        font-size: 1rem;
+    }
+    
+    .recipe-nav-card p {
+        font-size: 0.8rem;
+    }
 }
 
 @media (max-width: 480px) {
@@ -331,5 +425,14 @@
     
     .recipe-content {
         padding: 1rem;
+    }
+    
+    .recipe-nav-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+    
+    .recipe-navigation h2 {
+        font-size: 1.5rem;
     }
 }
