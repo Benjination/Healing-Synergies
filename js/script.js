@@ -1,0 +1,324 @@
+// Mobile Navigation Toggle
+const hamburger = document.getElementById('hamburger');
+const navMenu = document.getElementById('nav-menu');
+
+hamburger.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+});
+
+// Close mobile menu when clicking on a link
+document.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+        navMenu.classList.remove('active');
+    });
+});
+
+// Smooth scrolling for navigation links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    });
+});
+
+// Gallery functionality
+const galleryImages = [
+    {
+        src: 'images/Gallery/Child Smoothie.jpg',
+        alt: 'Child enjoying a healthy smoothie'
+    },
+    {
+        src: 'images/Gallery/Cindy 3 Week.jpg',
+        alt: 'Cindy 3 Week transformation'
+    },
+    {
+        src: 'images/Gallery/Garden.jpg',
+        alt: 'Organic garden'
+    },
+    {
+        src: 'images/Gallery/Hammock.jpg',
+        alt: 'Relaxation in hammock'
+    },
+    {
+        src: 'images/Gallery/Handstand.png',
+        alt: 'Yoga handstand practice'
+    },
+    {
+        src: 'images/Gallery/JoeStory.jpg',
+        alt: 'Joe\'s transformation story'
+    },
+    {
+        src: 'images/Gallery/Living Room.png',
+        alt: 'Peaceful living space'
+    },
+    {
+        src: 'images/Gallery/Main House.jpg',
+        alt: 'Main healing center'
+    },
+    {
+        src: 'images/Gallery/Qigong.png',
+        alt: 'Qigong practice'
+    },
+    {
+        src: 'images/Gallery/Raw Food Retreat.jpg',
+        alt: 'Raw food retreat'
+    },
+    {
+        src: 'images/Gallery/Raw Joey.jpg',
+        alt: 'Raw food preparation'
+    },
+    {
+        src: 'images/Gallery/Raw Sketti.jpg',
+        alt: 'Raw spaghetti dish'
+    },
+    {
+        src: 'images/Gallery/Raw Taco.jpg',
+        alt: 'Raw taco creation'
+    },
+    {
+        src: 'images/Gallery/salad.jpg',
+        alt: 'Fresh organic salad'
+    },
+    {
+        src: 'images/Gallery/Tomatos.jpg',
+        alt: 'Fresh tomatoes from garden'
+    }
+];
+
+// Load gallery images
+function loadGallery() {
+    const galleryGrid = document.getElementById('gallery-grid');
+    if (galleryGrid) {
+        galleryImages.forEach(image => {
+            const galleryItem = document.createElement('div');
+            galleryItem.className = 'gallery-item';
+            galleryItem.innerHTML = `
+                <img src="${image.src}" alt="${image.alt}" loading="lazy">
+            `;
+            
+            // Add click event for image modal/lightbox (optional enhancement)
+            galleryItem.addEventListener('click', () => {
+                openImageModal(image.src, image.alt);
+            });
+            
+            galleryGrid.appendChild(galleryItem);
+        });
+    }
+}
+
+// Simple image modal functionality
+function openImageModal(src, alt) {
+    // Create modal overlay
+    const modal = document.createElement('div');
+    modal.className = 'image-modal';
+    modal.innerHTML = `
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <img src="${src}" alt="${alt}">
+            <p>${alt}</p>
+        </div>
+    `;
+    
+    // Add modal styles
+    modal.style.cssText = `
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.8);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 2000;
+    `;
+    
+    const modalContent = modal.querySelector('.modal-content');
+    modalContent.style.cssText = `
+        position: relative;
+        max-width: 90%;
+        max-height: 90%;
+        text-align: center;
+    `;
+    
+    const modalImage = modal.querySelector('img');
+    modalImage.style.cssText = `
+        max-width: 100%;
+        max-height: 80vh;
+        object-fit: contain;
+    `;
+    
+    const closeButton = modal.querySelector('.close-modal');
+    closeButton.style.cssText = `
+        position: absolute;
+        top: -40px;
+        right: 0;
+        color: white;
+        font-size: 30px;
+        cursor: pointer;
+    `;
+    
+    const caption = modal.querySelector('p');
+    caption.style.cssText = `
+        color: white;
+        margin-top: 10px;
+        font-size: 14px;
+    `;
+    
+    document.body.appendChild(modal);
+    
+    // Close modal events
+    closeButton.addEventListener('click', () => {
+        document.body.removeChild(modal);
+    });
+    
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            document.body.removeChild(modal);
+        }
+    });
+    
+    // Close on escape key
+    const escapeHandler = (e) => {
+        if (e.key === 'Escape') {
+            if (document.body.contains(modal)) {
+                document.body.removeChild(modal);
+            }
+            document.removeEventListener('keydown', escapeHandler);
+        }
+    };
+    document.addEventListener('keydown', escapeHandler);
+}
+
+// Newsletter form submission
+function handleNewsletterSubmission() {
+    const newsletterForm = document.querySelector('.newsletter-form');
+    if (newsletterForm) {
+        newsletterForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const email = e.target.querySelector('input[type="email"]').value;
+            
+            // Here you would typically send the email to your newsletter service
+            // For now, we'll just show a success message
+            alert('Thank you for subscribing! You\'ll receive your 10% discount code shortly.');
+            e.target.reset();
+        });
+    }
+}
+
+// Contact form submission
+function handleContactFormSubmission() {
+    const contactForm = document.querySelector('.contact-form form');
+    if (contactForm) {
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(e.target);
+            const name = e.target.querySelector('input[type="text"]').value;
+            const email = e.target.querySelector('input[type="email"]').value;
+            const phone = e.target.querySelector('input[type="tel"]').value;
+            const message = e.target.querySelector('textarea').value;
+            
+            // Here you would typically send the form data to your server
+            // For now, we'll just show a success message
+            alert('Thank you for your message! We\'ll get back to you soon.');
+            e.target.reset();
+        });
+    }
+}
+
+// Scroll animations (fade in on scroll)
+function setupScrollAnimations() {
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            }
+        });
+    }, observerOptions);
+    
+    // Observe elements for animation
+    const animatedElements = document.querySelectorAll('.service-card, .testimonial-card, .recipe-category, .gallery-item');
+    
+    animatedElements.forEach(el => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(20px)';
+        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        observer.observe(el);
+    });
+}
+
+// Navigation background on scroll
+function setupNavigationScroll() {
+    const navbar = document.querySelector('.navbar');
+    
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 100) {
+            navbar.style.background = 'rgba(255, 255, 255, 0.95)';
+            navbar.style.backdropFilter = 'blur(10px)';
+        } else {
+            navbar.style.background = '#fff';
+            navbar.style.backdropFilter = 'none';
+        }
+    });
+}
+
+// Active navigation link highlighting
+function setupActiveNavigation() {
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-link');
+    
+    window.addEventListener('scroll', () => {
+        let current = '';
+        
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+            if (window.scrollY >= (sectionTop - 200)) {
+                current = section.getAttribute('id');
+            }
+        });
+        
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === `#${current}`) {
+                link.classList.add('active');
+            }
+        });
+    });
+}
+
+// Initialize all functionality when DOM is loaded
+document.addEventListener('DOMContentLoaded', () => {
+    loadGallery();
+    handleNewsletterSubmission();
+    handleContactFormSubmission();
+    setupScrollAnimations();
+    setupNavigationScroll();
+    setupActiveNavigation();
+});
+
+// Add active navigation link styles
+const activeNavStyles = `
+    .nav-link.active {
+        color: #7fb069;
+        font-weight: 600;
+    }
+`;
+
+const styleSheet = document.createElement('style');
+styleSheet.textContent = activeNavStyles;
+document.head.appendChild(styleSheet);
