@@ -423,6 +423,21 @@ p {
     border: 3px solid #D196E0;
 }
 
+/* Raw Food Testimonial Image */
+.raw-food-image-container {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.raw-food-testimonial-image {
+    max-width: 400px;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(139, 90, 159, 0.3);
+    border: 3px solid #D196E0;
+}
+
 /* Gallery Section */
 .gallery-grid {
     display: grid;
@@ -758,6 +773,10 @@ p {
     }
     
     .arch-testimonial-image {
+        max-width: 300px;
+    }
+    
+    .raw-food-testimonial-image {
         max-width: 300px;
     }
     
