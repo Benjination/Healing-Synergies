@@ -244,18 +244,6 @@
         </div>
     </section>
 
-    <!-- Newsletter Section -->
-    <section class="newsletter-section">
-        <div class="container">
-            <h2>Subscribe to Our Newsletter</h2>
-            <p>Get 10% off your first purchase when you sign up for our newsletter!</p>
-            <form class="newsletter-form">
-                <input type="email" placeholder="Enter your email address" required>
-                <button type="submit" class="btn btn-primary">Sign Up</button>
-            </form>
-        </div>
-    </section>
-
     <!-- Discount Section -->
     <section class="discount-section bg-light">
         <div class="container">
@@ -293,19 +281,20 @@
                 
                 <div class="contact-form">
                     <h3>Drop us a line!</h3>
-                    <form>
+                    <form action="https://formspree.io/f/xrbldlew" method="POST">
                         <div class="form-group">
-                            <input type="text" placeholder="Your Name" required>
+                            <input type="text" name="name" placeholder="Your Name" required>
                         </div>
                         <div class="form-group">
-                            <input type="email" placeholder="Your Email" required>
+                            <input type="email" name="email" placeholder="Your Email" required>
                         </div>
                         <div class="form-group">
-                            <input type="tel" placeholder="Your Phone">
+                            <input type="tel" name="phone" placeholder="Your Phone">
                         </div>
                         <div class="form-group">
-                            <textarea placeholder="Your Message" rows="5" required></textarea>
+                            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
                         </div>
+                        <input type="hidden" name="_subject" value="New Contact from Healing Synergies Website">
                         <button type="submit" class="btn btn-primary">Send Message</button>
                     </form>
                 </div>

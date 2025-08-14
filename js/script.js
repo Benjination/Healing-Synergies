@@ -196,40 +196,24 @@ function openImageModal(src, alt) {
     document.addEventListener('keydown', escapeHandler);
 }
 
-// Newsletter form submission
-function handleNewsletterSubmission() {
-    const newsletterForm = document.querySelector('.newsletter-form');
-    if (newsletterForm) {
-        newsletterForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            const email = e.target.querySelector('input[type="email"]').value;
-            
-            // Here you would typically send the email to your newsletter service
-            // For now, we'll just show a success message
-            alert('Thank you for subscribing! You\'ll receive your 10% discount code shortly.');
-            e.target.reset();
-        });
-    }
-}
-
 // Contact form submission
 function handleContactFormSubmission() {
     const contactForm = document.querySelector('.contact-form form');
     if (contactForm) {
         contactForm.addEventListener('submit', (e) => {
-            e.preventDefault();
+            // Let Formspree handle the submission
+            // Show a temporary success message
+            const button = e.target.querySelector('button');
+            const originalText = button.textContent;
             
-            // Get form data
-            const formData = new FormData(e.target);
-            const name = e.target.querySelector('input[type="text"]').value;
-            const email = e.target.querySelector('input[type="email"]').value;
-            const phone = e.target.querySelector('input[type="tel"]').value;
-            const message = e.target.querySelector('textarea').value;
+            button.textContent = 'Sending...';
+            button.disabled = true;
             
-            // Here you would typically send the form data to your server
-            // For now, we'll just show a success message
-            alert('Thank you for your message! We\'ll get back to you soon.');
-            e.target.reset();
+            // Re-enable button after a delay (Formspree will redirect)
+            setTimeout(() => {
+                button.textContent = originalText;
+                button.disabled = false;
+            }, 3000);
         });
     }
 }
@@ -304,7 +288,6 @@ function setupActiveNavigation() {
 // Initialize all functionality when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
     loadGallery();
-    handleNewsletterSubmission();
     handleContactFormSubmission();
     setupScrollAnimations();
     setupNavigationScroll();
