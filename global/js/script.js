@@ -3,7 +3,16 @@ const hamburger = document.getElementById('hamburger');
 const navMenu = document.getElementById('nav-menu');
 
 hamburger.addEventListener('click', () => {
-    navMenu.classList.toggle('active');
+    const navbar = document.querySelector('.navbar');
+    const isScrolled = navbar.classList.contains('scrolled');
+    const isMobile = window.innerWidth <= 768;
+    
+    // Allow hamburger toggle in these cases:
+    // 1. When header is not scrolled (normal state)
+    // 2. When on mobile and header is scrolled
+    if (!isScrolled || (isScrolled && isMobile)) {
+        navMenu.classList.toggle('active');
+    }
 });
 
 // Close mobile menu when clicking on a link
@@ -289,13 +298,18 @@ function setupActiveNavigation() {
 
 // Initialize all functionality when DOM is loaded
 document.addEventListener('DOMContentLoaded', function() {
-    // Simple scrolling header effect
+    // Enhanced scrolling header effect with smooth menu transitions
     const navbar = document.querySelector('.navbar');
+    const navMenu = document.getElementById('nav-menu');
     
     if (navbar) {
         window.addEventListener('scroll', function() {
             if (window.scrollY > 100) {
                 navbar.classList.add('scrolled');
+                // Close mobile menu when scrolling down and header shrinks
+                if (navMenu.classList.contains('active')) {
+                    navMenu.classList.remove('active');
+                }
             } else {
                 navbar.classList.remove('scrolled');
             }

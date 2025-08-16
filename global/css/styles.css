@@ -114,18 +114,34 @@ p {
     background-color: white;
     width: 100%;
     text-align: center;
-    transition: 0.3s;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     box-shadow: 0 10px 27px rgba(0,0,0,0.05);
     padding: 2rem 0;
+    opacity: 0;
+    transform: translateX(-100%);
 }
 
 .navbar.scrolled .nav-menu {
     top: 80px;
+    left: 0;
+    display: flex;
+    opacity: 1;
+    transform: translateX(0);
+    flex-direction: row;
+    position: relative;
+    width: auto;
+    padding: 0;
+    box-shadow: none;
+    background-color: transparent;
+    margin-left: auto;
+    margin-right: 20px;
 }
 
 .nav-menu.active {
     left: 0;
     display: flex;
+    opacity: 1;
+    transform: translateX(0);
 }
 
 .hamburger {
@@ -136,15 +152,14 @@ p {
     top: 50%;
     right: 20px;
     transform: translateY(-50%);
-    transition: all 0.3s ease;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    opacity: 1;
 }
 
 .navbar.scrolled .hamburger {
-    position: relative;
-    top: auto;
-    right: auto;
-    transform: none;
-    margin-left: 20px;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-50%) scale(0.8);
 }
 
 .nav-link {
@@ -812,7 +827,31 @@ p {
     color: #ccc;
 }
 
-/* Responsive Design */
+/* Desktop Navigation Behavior */
+@media (min-width: 769px) {
+    .navbar.scrolled .nav-menu {
+        position: relative;
+        flex-direction: row;
+        width: auto;
+        background-color: transparent;
+        box-shadow: none;
+        padding: 0;
+        margin-left: auto;
+        margin-right: 20px;
+        top: auto;
+        left: auto;
+        display: flex;
+        opacity: 1;
+        transform: translateX(0);
+    }
+    
+    .navbar.scrolled .hamburger {
+        opacity: 0;
+        pointer-events: none;
+    }
+}
+
+/* Mobile Navigation Behavior */
 @media (max-width: 768px) {
     .nav-container {
         height: 160px;
@@ -844,6 +883,24 @@ p {
     
     .navbar.scrolled .nav-menu {
         top: 70px;
+        flex-direction: column;
+        position: fixed;
+        width: 100%;
+        background-color: white;
+        box-shadow: 0 10px 27px rgba(0,0,0,0.05);
+        padding: 1rem 0;
+        margin-left: 0;
+        margin-right: 0;
+        left: 0;
+    }
+    
+    .navbar.scrolled .hamburger {
+        opacity: 1;
+        pointer-events: auto;
+        position: absolute;
+        top: 50%;
+        right: 20px;
+        transform: translateY(-50%);
     }
     
     .hero-logo-img {
