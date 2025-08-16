@@ -245,7 +245,8 @@ function setupScrollAnimations() {
     });
 }
 
-// Navigation background on scroll
+// Navigation background on scroll - DISABLED (conflicts with header shrinking)
+/*
 function setupNavigationScroll() {
     const navbar = document.querySelector('.navbar');
     
@@ -259,6 +260,7 @@ function setupNavigationScroll() {
         }
     });
 }
+*/
 
 // Active navigation link highlighting
 function setupActiveNavigation() {
@@ -286,12 +288,24 @@ function setupActiveNavigation() {
 }
 
 // Initialize all functionality when DOM is loaded
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', function() {
+    // Simple scrolling header effect
+    const navbar = document.querySelector('.navbar');
+    
+    if (navbar) {
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 100) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    }
+
+    // Initialize other functionality
     loadGallery();
     handleContactFormSubmission();
     setupScrollAnimations();
-    setupNavigationScroll();
-    setupActiveNavigation();
 });
 
 // Add active navigation link styles

@@ -1,7 +1,7 @@
 /* Services Page Specific Styles */
 
 .services-hero {
-    padding: 180px 0 80px;
+    padding: 320px 0 80px;
     background: linear-gradient(135deg, #E2C4FF 0%, #F5E6FF 50%, #FFE6F0 100%);
     text-align: center;
 }
@@ -75,6 +75,37 @@
     color: #8B5A9F;
     margin-bottom: 0.5rem;
     font-family: 'Merriweather', serif;
+}
+
+.pricing-options {
+    display: flex;
+    justify-content: space-around;
+    margin: 1.5rem 0;
+    gap: 1rem;
+}
+
+.price-option {
+    flex: 1;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 10px;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.price-option:hover {
+    border-color: #D196E0;
+    background: #F5E6FF;
+}
+
+.price-option .price {
+    font-size: 2rem;
+    margin-bottom: 0.25rem;
+}
+
+.price-option .session-info {
+    margin-bottom: 0;
+    font-size: 0.85rem;
 }
 
 .session-info {

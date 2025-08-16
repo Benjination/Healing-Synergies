@@ -1,0 +1,14 @@
+{
+  "name": "healing-synergies",
+  "version": "1.0.0",
+  "description": "Healing Synergies website",
+  "main": "index.js",
+  "scripts": {
+    "dev": "live-server --port=8000"
+  },
+  "author": "Suzy Edmonson",
+  "license": "ISC",
+  "dependencies": {
+    "live-server": "^1.2.1"
+  }
+}
