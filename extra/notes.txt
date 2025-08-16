@@ -31,16 +31,16 @@ ORGANIZED TASK BREAKDOWN - Website Updates
 
 🖼️ IMAGE MANAGEMENT
 ------------------
-□ Task 14: Delete Eagle Point pictures
-□ Task 15: Delete futon image
-□ Task 16: Delete duplicate spaghetti pictures
-□ Task 17: Delete duplicate Joe pictures
+☑️ Task 14: Delete Eagle Point pictures
+☑️ Task 15: Delete futon image
+☑️ Task 16: Delete duplicate spaghetti pictures
+☑️ Task 17: Delete duplicate Joe pictures
 □ Task 18: Deactivate donate button
 
 📝 BLOG CONTENT UPDATES
 ----------------------
-□ Task 19: Delete blog posts: "Rejuv retreat", "Testimonials", "Raw food radiant"
-□ Task 20: Delete blog posts 2, 3, 4
+☑️ Task 19: Delete blog posts: "Rejuv retreat", "Testimonials", "Raw food radiant"
+☑️ Task 20: Delete blog posts 2, 3, 4
 □ Task 21: Monetize "Cultivating Plants" content
 □ Task 22: Find and add hyperlinks for 3-week challenge
 □ Task 23: Add content to challenge section

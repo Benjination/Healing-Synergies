@@ -29,13 +29,14 @@
 
 .pricing-card {
     background: white;
-    padding: 2.5rem 2rem;
+    padding: 2.5rem 2rem 1.5rem 2rem;
     border-radius: 15px;
     box-shadow: 0 8px 25px rgba(0,0,0,0.1);
     text-align: center;
     transition: all 0.3s ease;
     border: 2px solid transparent;
     position: relative;
+    height: auto;
 }
 
 .pricing-card:hover {
@@ -64,7 +65,7 @@
 
 .service-description {
     color: #666;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     line-height: 1.6;
     font-size: 0.95rem;
 }
@@ -110,7 +111,7 @@
 
 .session-info {
     color: #888;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     font-size: 0.9rem;
 }
 
@@ -119,6 +120,7 @@
     padding: 12px 20px;
     font-size: 1rem;
     font-weight: 600;
+    margin-bottom: 0;
 }
 
 /* Modal Styles */

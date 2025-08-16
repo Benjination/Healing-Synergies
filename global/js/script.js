@@ -63,24 +63,12 @@ const galleryImages = [
         alt: 'Joe\'s transformation story'
     },
     {
-        src: 'images/Gallery/Living Room.png',
-        alt: 'Peaceful living space'
-    },
-    {
-        src: 'images/Gallery/Main House.jpg',
-        alt: 'Main healing center'
-    },
-    {
         src: 'images/Gallery/Qigong.png',
         alt: 'Qigong practice'
     },
     {
         src: 'images/Gallery/Raw Food Retreat.jpg',
         alt: 'Raw food retreat'
-    },
-    {
-        src: 'images/Gallery/Raw Joey.jpg',
-        alt: 'Raw food preparation'
     },
     {
         src: 'images/Gallery/Raw Sketti.jpg',
