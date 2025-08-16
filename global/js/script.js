@@ -78,10 +78,7 @@ const galleryImages = [
         src: 'images/Gallery/Raw Taco.jpg',
         alt: 'Raw taco creation'
     },
-    {
-        src: 'images/Gallery/salad.jpg',
-        alt: 'Fresh organic salad'
-    },
+    // ...removed empty object...
     {
         src: 'images/Gallery/Tomatos.jpg',
         alt: 'Fresh tomatoes from garden'
