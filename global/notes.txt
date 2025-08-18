@@ -47,13 +47,13 @@ ORGANIZED TASK BREAKDOWN - Website Updates
 
 🌈 ARCH SERVICE UPDATES
 ----------------------
-□ Task 24: Update Laurie quote - change "My own healing took p" to "My own..."
-□ Task 25: Remove location details from class information
-□ Task 26: Remove cost and deposit information from class details
-□ Task 27: Add "please contact" under when section
-□ Task 28: Delete "Where" section
-□ Task 29: Delete "Contact" section from ARCH
-□ Task 30: Move ARCH class specifically to Services page
+☑️ Task 24: Update Laurie quote - change "My own healing took p" to "My own..."
+☑️ Task 25: Remove location details from class information
+☑️ Task 26: Remove cost and deposit information from class details
+☑️ Task 27: Add "please contact" under when section
+☑️ Task 28: Delete "Where" section
+☑️ Task 29: Delete "Contact" section from ARCH
+☑️ Task 30: Move ARCH class specifically to Services page
 
 📧 CONTACT FORM UPDATES
 ----------------------
@@ -93,11 +93,6 @@ Ready to start with Task 1? Let me know which task you'd like to tackle first!
 
 
 
-(photo main, me
--certified
-+health coaching
-and health coaching including certified Live Food & Lifestyle Instruction.
-
 donate button inactive - 
 Monetize - Cultivating Plants
 3-week challenge - Find and link hyperlinks. 
@@ -110,3 +105,14 @@ Contact form works? Change email to Suzy instead of me
 Bio - 
 Add Paypal
 Add Vimeo with paywall. 
+
+
+Purple Healing Synergies-delete the LLC and add a~
+Make the tagline a little bit bigger
+
+Donate button not yet operational
+Qigong sensory treatment for autism (Add for autism)
+You did a lot of work on the recipes!😮 Can you add a PDF file with the booklet for all the recipes? I’d like people to be able to download whole booklet
+Delete the won’t spike blood sugar
+
+
