@@ -289,13 +289,19 @@ document.addEventListener('DOMContentLoaded', function() {
     
     if (navbar) {
         window.addEventListener('scroll', function() {
-            if (window.scrollY > 100) {
-                navbar.classList.add('scrolled');
-                // Close mobile menu when scrolling down and header shrinks
-                if (navMenu.classList.contains('active')) {
-                    navMenu.classList.remove('active');
+            const isMobile = window.innerWidth <= 768;
+            if (!isMobile) {
+                if (window.scrollY > 100) {
+                    navbar.classList.add('scrolled');
+                    // Close desktop menu when scrolling down and header shrinks
+                    if (navMenu.classList.contains('active')) {
+                        navMenu.classList.remove('active');
+                    }
+                } else {
+                    navbar.classList.remove('scrolled');
                 }
             } else {
+                // On mobile, never expand/collapse menu on scroll
                 navbar.classList.remove('scrolled');
             }
         });
