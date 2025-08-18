@@ -300,11 +300,13 @@
             <h2>If You Need a Discount</h2>
             <p>These services can be life-changing, and I like to make them available to as many people as I can. In some cases, services can be provided at a discount, on a donation basis. Please contact me if you would like to request a discount.</p>
             <div class="donation-button">
-                <form action="https://www.paypal.com/donate" method="post" target="_top">
-                    <input type="hidden" name="business" value="healingsynergies@gmail.com" />
-                    <input type="hidden" name="no_recurring" value="0" />
-                    <input type="hidden" name="currency_code" value="USD" />
-                    <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
+                <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                  <input type="hidden" name="cmd" value="_xclick" />
+                  <input type="hidden" name="business" value="healingsynergies@gmail.com" />
+                  <input type="hidden" name="item_name" value="Donation" />
+                  <input type="hidden" name="currency_code" value="USD" />
+                  <input type="hidden" name="amount" value="" />
+                  <button type="submit" class="btn btn-primary" style="font-size:1.1em; padding:10px 24px;">Donate</button>
                 </form>
             </div>
         </div>

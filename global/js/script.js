@@ -38,51 +38,44 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 // Gallery functionality
 const galleryImages = [
-    {
-        src: 'images/Gallery/Child Smoothie.jpg',
-        alt: 'Child enjoying a healthy smoothie'
-    },
-    {
-        src: 'images/Gallery/Cindy 3 Week.jpg',
-        alt: 'Cindy 3 Week transformation'
-    },
-    {
-        src: 'images/Gallery/Garden.jpg',
-        alt: 'Organic garden'
-    },
-    {
-        src: 'images/Gallery/Hammock.jpg',
-        alt: 'Relaxation in hammock'
-    },
-    {
-        src: 'images/Gallery/Handstand.png',
-        alt: 'Yoga handstand practice'
-    },
-    {
-        src: 'images/Gallery/JoeStory.jpg',
-        alt: 'Joe\'s transformation story'
-    },
-    {
-        src: 'images/Gallery/Qigong.png',
-        alt: 'Qigong practice'
-    },
-    {
-        src: 'images/Gallery/Raw Food Retreat.jpg',
-        alt: 'Raw food retreat'
-    },
-    {
-        src: 'images/Gallery/Raw Sketti.jpg',
-        alt: 'Raw spaghetti dish'
-    },
-    {
-        src: 'images/Gallery/Raw Taco.jpg',
-        alt: 'Raw taco creation'
-    },
-    // ...removed empty object...
-    {
-        src: 'images/Gallery/Tomatos.jpg',
-        alt: 'Fresh tomatoes from garden'
-    }
+    { src: 'images/Gallery/Child Smoothie.jpg', alt: 'Child enjoying a healthy smoothie' },
+    { src: 'images/Gallery/Cindy 3 Week.jpg', alt: 'Cindy 3 Week transformation' },
+    { src: 'images/Gallery/Garden.jpg', alt: 'Organic garden' },
+    { src: 'images/Gallery/Hammock.jpg', alt: 'Relaxation in hammock' },
+    { src: 'images/Gallery/Handstand.png', alt: 'Yoga handstand practice' },
+    { src: 'images/Gallery/JoeStory.jpg', alt: 'Joe\'s transformation story' },
+    { src: 'images/Gallery/Qigong.png', alt: 'Qigong practice' },
+    { src: 'images/Gallery/Raw Food Retreat.jpg', alt: 'Raw food retreat' },
+    { src: 'images/Gallery/Raw Sketti.jpg', alt: 'Raw spaghetti dish' },
+    { src: 'images/Gallery/Raw Taco.jpg', alt: 'Raw taco creation' },
+    { src: 'images/Gallery/Tomatos.jpg', alt: 'Fresh tomatoes from garden' },
+    { src: 'images/Gallery/fullsizeoutput_2bf1.jpeg', alt: 'Food presentation' },
+    { src: 'images/Gallery/Meal.jpg', alt: 'Healthy meal' },
+    // Removed Meal.webp reference
+    // Food Pics unique images
+    { src: 'images/Gallery/Food Pics/AlmostQueso.JPG', alt: 'Almost Queso' },
+    { src: 'images/Gallery/Food Pics/AvacadoSalad.JPG', alt: 'Avocado Salad' },
+    { src: 'images/Gallery/Food Pics/Bean Soup.jpeg', alt: 'Bean Soup' },
+    { src: 'images/Gallery/Food Pics/CarrotCake.JPG', alt: 'Carrot Cake' },
+    { src: 'images/Gallery/Food Pics/ChocBanana.jpeg', alt: 'Chocolate Banana' },
+    { src: 'images/Gallery/Food Pics/ChocMilk.jpeg', alt: 'Chocolate Milk' },
+    { src: 'images/Gallery/Food Pics/Dessert.jpeg', alt: 'Dessert' },
+    { src: 'images/Gallery/Food Pics/Gallery3.jpeg', alt: 'Joe at retreat' },
+    { src: 'images/Gallery/Food Pics/Gallery5.jpeg', alt: 'Group at retreat' },
+    { src: 'images/Gallery/Food Pics/GojiBanana.JPG', alt: 'Goji Banana' },
+    { src: 'images/Gallery/Food Pics/GreenSmoothie.jpeg', alt: 'Green Smoothie' },
+    { src: 'images/Gallery/Food Pics/Neatballs.JPG', alt: 'Neatballs' },
+    { src: 'images/Gallery/Food Pics/NotFish.JPG', alt: 'Not Fish' },
+    { src: 'images/Gallery/Food Pics/Rainbow Salad.JPG', alt: 'Rainbow Salad' },
+    { src: 'images/Gallery/Food Pics/RawChocCake2.JPG', alt: 'Raw Chocolate Cake 2' },
+    { src: 'images/Gallery/Food Pics/RawChocCake4.JPG', alt: 'Raw Chocolate Cake 4' },
+    { src: 'images/Gallery/Food Pics/RawChoccake.JPG', alt: 'Raw Chocolate Cake' },
+    { src: 'images/Gallery/Food Pics/RawPizza.jpeg', alt: 'Raw Pizza' },
+    { src: 'images/Gallery/Food Pics/SmoothiePrep.jpeg', alt: 'Smoothie Prep' },
+    { src: 'images/Gallery/Food Pics/TropSmooth.JPG', alt: 'Tropical Smoothie' },
+    { src: 'images/Gallery/Food Pics/VegetableDip.jpeg', alt: 'Vegetable Dip' },
+    { src: 'images/Gallery/Food Pics/WalnutSalad.jpeg', alt: 'Walnut Salad' },
+    { src: 'images/Gallery/Food Pics/WalnutSalad2.jpeg', alt: 'Walnut Salad 2' }
 ];
 
 // Load gallery images
