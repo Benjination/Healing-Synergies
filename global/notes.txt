@@ -35,7 +35,7 @@ ORGANIZED TASK BREAKDOWN - Website Updates
 ☑️ Task 15: Delete futon image
 ☑️ Task 16: Delete duplicate spaghetti pictures
 ☑️ Task 17: Delete duplicate Joe pictures
-□ Task 18: Deactivate donate button
+☑️ Task 18: Deactivate donate button
 
 📝 BLOG CONTENT UPDATES
 ----------------------
@@ -62,7 +62,7 @@ ORGANIZED TASK BREAKDOWN - Website Updates
 
 💳 PAYMENT INTEGRATION
 ---------------------
-□ Task 33: Add PayPal payment integration
+☑️ Task 33: Add PayPal payment integration
 □ Task 34: Set up Vimeo with paywall functionality
 
 🎯 PRIORITY ORDER RECOMMENDATIONS:
@@ -87,30 +87,21 @@ ORGANIZED TASK BREAKDOWN - Website Updates
 
 TOTAL ESTIMATED: 13-17 hours additional work
 
-================================================================================
-Ready to start with Task 1? Let me know which task you'd like to tackle first!
-================================================================================
 
 
 
-donate button inactive - 
 Monetize - Cultivating Plants
 3-week challenge - Find and link hyperlinks. 
-ARCH - 
-Quote Laurie, beginning My own healing took p -> "My own...
-Class details omit where, last part of cost, deposit 
-Add contact: under when say please contact. Delete Where, Delete Contact
-Move ARCH to services (contact) Move arch to services. The class specifically
-Contact form works? Change email to Suzy instead of me
-Bio - 
-Add Paypal
+
+
+
 Add Vimeo with paywall. 
 
 
 Purple Healing Synergies-delete the LLC and add a~
 Make the tagline a little bit bigger
 
-Donate button not yet operational
+
 Qigong sensory treatment for autism (Add for autism)
 You did a lot of work on the recipes!😮 Can you add a PDF file with the booklet for all the recipes? I’d like people to be able to download whole booklet
 Delete the won’t spike blood sugar
