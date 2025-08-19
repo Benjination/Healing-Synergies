@@ -41,7 +41,7 @@ ORGANIZED TASK BREAKDOWN - Website Updates
 ----------------------
 ☑️ Task 19: Delete blog posts: "Rejuv retreat", "Testimonials", "Raw food radiant"
 ☑️ Task 20: Delete blog posts 2, 3, 4
-□ Task 21: Monetize "Cultivating Plants" content
+ⓧ Task 21: Monetize "Cultivating Plants" content
 □ Task 22: Find and add hyperlinks for 3-week challenge
 ☑️ Task 23: Add content to challenge section
 
@@ -57,13 +57,33 @@ ORGANIZED TASK BREAKDOWN - Website Updates
 
 📧 CONTACT FORM UPDATES
 ----------------------
-□ Task 31: Test contact form functionality
-□ Task 32: Change contact form email from current to Suzy's email
+☑️ ️Task 31: Test contact form functionality
+☑️ Task 32: Change contact form email from current to Suzy's email
 
 💳 PAYMENT INTEGRATION
 ---------------------
 ☑️ Task 33: Add PayPal payment integration
-□ Task 34: Set up Vimeo with paywall functionality
+ⓧ Task 34: Set up Vimeo with paywall functionality
+
+🔄 NEW CLIENT REQUESTS - ROUND 2
+------------------------------
+□ Task 35: Research and add alternative payment options (Venmo, CashApp, Zelle)
+□ Task 36: Change hamburger menu links to display horizontally instead of vertically
+□ Task 37: Update Qigong service title to include "for Autism" on home page
+□ Task 38: Combine "Healing Synergies" and tagline to look like a caption
+□ Task 39: Fix About link navigation (currently goes to wrong spot)
+□ Task 40: Add donation button under donate section in 3-week challenge blog
+□ Task 41: Add "Read More" button to 3-week challenge service
+□ Task 42: Add content to "Cultivating Plants" blog and link videos
+□ Task 43: Fix banner sizing issue on Privacy section (not shrinking properly)
+□ Task 44: Center Cindy's picture in Gallery section
+□ Task 45: Change text color in Privacy/Legal sections for better readability
+□ Task 46: Replace "Healing" with "Energy Work" in privacy policy (legal compliance)
+□ Task 47: Replace "Diet" with "Education" throughout site
+□ Task 48: Add cancellation policy: "No refunds within 24 hours of service"
+□ Task 49: Fix "Comprehensive Holistic Health Services" text sizing inconsistencies
+□ Task 50: Add new bio content under "Comprehensive Holistic Health Services"
+□ Task 51: Add icons to all recipe category tiles
 
 🎯 PRIORITY ORDER RECOMMENDATIONS:
 1. Homepage text updates (Tasks 1-9) - Easy content changes
@@ -224,7 +244,23 @@ $85-140+ per hour in the professional market.
 ================================================================================
 
 
-
+1. Look into Venmo, Cashapp, Zelle, etc…
+2. Change links in hamburger menu to show horizontally instead of vertically
+3. Qigong for Autism in both places (home)
+4. Combine healing synergies modalities and make it look like caption
+5. About link goes to wrong spot. 
+6. Add donation button under donate in blog 3 week
+7. Add read more button to 3 week service. 
+8. Add content to Cultivating plants and link videos. 
+9. Banner on Privacy section is not shrinking. 
+10. Center picture of Cindy in Gallery
+11. Change color of Privacy Legal stuff text
+12. Remove Healing word from privacy policy and replace with energy work. Can’t use healing.
+13. Replace Diet with Education
+14. Cancellation policy, No refunds within 24 hours of service 
+15.  Comprehensive Holistic Health Services - Different sized texts
+16. New bio coming - combine all text under Comprehensive Holistic Health Services
+17. Add icons to all recipe tiles
 
 
 

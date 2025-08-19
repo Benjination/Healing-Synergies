@@ -105,18 +105,19 @@ p {
 
 .nav-menu {
     display: none; /* Hidden by default, shown when hamburger is clicked */
-    gap: 2rem;
+    gap: 1.5rem;
     justify-content: center;
     position: fixed;
     left: -100%;
     top: 340px;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
     background-color: white;
     width: 100%;
     text-align: center;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     box-shadow: 0 10px 27px rgba(0,0,0,0.05);
-    padding: 2rem 0;
+    padding: 1.5rem 1rem;
     opacity: 0;
     transform: translateX(-100%);
 }
@@ -879,19 +880,25 @@ p {
     .nav-menu {
         top: 260px;
         gap: 1rem;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 1rem;
     }
     
     .navbar.scrolled .nav-menu {
         top: 70px;
-        flex-direction: column;
+        flex-direction: row;
+        flex-wrap: wrap;
         position: fixed;
         width: 100%;
         background-color: white;
         box-shadow: 0 10px 27px rgba(0,0,0,0.05);
-        padding: 1rem 0;
+        padding: 1rem;
         margin-left: 0;
         margin-right: 0;
         left: 0;
+        justify-content: center;
+        gap: 1rem;
     }
     
     .navbar.scrolled .hamburger {
@@ -1005,5 +1012,41 @@ p {
     
     .service-card {
         padding: 1.5rem;
+    }
+}
+
+/* Additional responsive styles for horizontal navigation */
+@media (max-width: 600px) {
+    .nav-menu {
+        gap: 0.8rem;
+        padding: 1rem 0.5rem;
+    }
+    
+    .navbar.scrolled .nav-menu {
+        gap: 0.8rem;
+        padding: 1rem 0.5rem;
+    }
+    
+    .nav-link {
+        font-size: 0.9rem;
+        padding: 0.5rem;
+        white-space: nowrap;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-menu {
+        gap: 0.5rem;
+        padding: 0.8rem 0.3rem;
+    }
+    
+    .navbar.scrolled .nav-menu {
+        gap: 0.5rem;
+        padding: 0.8rem 0.3rem;
+    }
+    
+    .nav-link {
+        font-size: 0.8rem;
+        padding: 0.3rem;
     }
 }
