@@ -70,8 +70,8 @@ ORGANIZED TASK BREAKDOWN - Website Updates
 □ Task 35: Research and add alternative payment options (Venmo, CashApp, Zelle)
 ☑️ Task 36: Change hamburger menu links to display horizontally instead of vertically
 ☑️ Task 37: Update Qigong service title to include "for Autism" on home page
-□ Task 38: Combine "Healing Synergies" and tagline to look like a caption
-□ Task 39: Fix About link navigation (currently goes to wrong spot)
+☑️ Task 38: Combine "Healing Synergies" and tagline to look like a caption
+☑️ Task 39: Fix About link navigation (currently goes to wrong spot)
 □ Task 40: Add donation button under donate section in 3-week challenge blog
 □ Task 41: Add "Read More" button to 3-week challenge service
 □ Task 42: Add content to "Cultivating Plants" blog and link videos
