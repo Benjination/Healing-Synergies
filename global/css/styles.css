@@ -216,7 +216,7 @@ p {
 
 .family-image {
     text-align: center;
-    margin-bottom: 2rem;
+    margin-bottom: 0.5rem;
     width: 100%;
     padding: 0 20px;
 }
@@ -232,24 +232,18 @@ p {
 /* Business Header Styles */
 .business-header {
     text-align: center;
-    margin: 2rem 0;
+    margin: 0 0 2rem 0;
     width: 100%;
     padding: 0 20px;
 }
 
-.business-title {
-    font-size: 3rem;
-    color: #8B5A9F;
-    margin-bottom: 0.5rem;
-    font-family: 'Merriweather', serif;
-    font-weight: 400;
-}
-
-.tagline {
+.business-caption {
     font-size: 1.2rem;
     color: #666;
-    font-style: italic;
     margin: 0;
+    font-family: 'Merriweather', serif;
+    font-weight: 400;
+    font-style: italic;
 }
 
 .hero-content {
@@ -914,11 +908,7 @@ p {
         max-width: 150px;
     }
     
-    .business-title {
-        font-size: 2rem;
-    }
-    
-    .tagline {
+    .business-caption {
         font-size: 1rem;
     }
     
@@ -986,11 +976,7 @@ p {
         max-width: 125px;
     }
     
-    .business-title {
-        font-size: 1.8rem;
-    }
-    
-    .tagline {
+    .business-caption {
         font-size: 0.9rem;
     }
     
