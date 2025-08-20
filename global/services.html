@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/services.css">
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Open+Sans:wght@300;400;600&family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
     <!-- Navigation -->
@@ -62,32 +62,24 @@
                         <div class="price-option">
                             <div class="price">$75</div>
                             <div class="session-info">50 minutes</div>
-                            <!-- PayPal Button for $75 -->
-                            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" style="margin-top: 10px; margin-bottom: 10px;">
-                                <input type="hidden" name="cmd" value="_xclick" />
-                                <input type="hidden" name="business" value="Jonsuzedmonson@att.net" />
-                                <input type="hidden" name="item_name" value="Swedish Massage - 50 Minutes" />
-                                <input type="hidden" name="item_number" value="SM-50-75" />
-                                <input type="hidden" name="note" value="Payment for 50-minute Swedish Massage session - Healing Synergies" />
-                                <input type="hidden" name="currency_code" value="USD" />
-                                <input type="hidden" name="amount" value="75" />
-                                <button type="submit" class="btn btn-primary" style="font-size:0.9em; padding:8px 16px;">Pay Now</button>
-                            </form>
+                            
+                            <!-- Payment Options -->
+                            <div class="payment-options">
+                                <button class="btn btn-payment pay-now-btn" onclick="openPaymentModal('Swedish Massage', 50, 75)">
+                                    <i class="fas fa-credit-card"></i> Pay Now - $75
+                                </button>
+                            </div>
                         </div>
                         <div class="price-option">
                             <div class="price">$115</div>
                             <div class="session-info">80 minutes</div>
-                            <!-- PayPal Button for $115 -->
-                            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" style="margin-top: 10px; margin-bottom: 10px;">
-                                <input type="hidden" name="cmd" value="_xclick" />
-                                <input type="hidden" name="business" value="Jonsuzedmonson@att.net" />
-                                <input type="hidden" name="item_name" value="Swedish Massage - 80 Minutes" />
-                                <input type="hidden" name="item_number" value="SM-80-115" />
-                                <input type="hidden" name="note" value="Payment for 80-minute Swedish Massage session - Healing Synergies" />
-                                <input type="hidden" name="currency_code" value="USD" />
-                                <input type="hidden" name="amount" value="115" />
-                                <button type="submit" class="btn btn-primary" style="font-size:0.9em; padding:8px 16px;">Pay Now</button>
-                            </form>
+                            
+                            <!-- Payment Options -->
+                            <div class="payment-options">
+                                <button class="btn btn-payment pay-now-btn" onclick="openPaymentModal('Swedish Massage', 80, 115)">
+                                    <i class="fas fa-credit-card"></i> Pay Now - $115
+                                </button>
+                            </div>
                         </div>
                     </div>
                     <button class="btn btn-primary book-btn" onclick="openBookingModal('Swedish Massage')">Book Now</button>
@@ -349,6 +341,56 @@
             </div>
         </div>
     </footer>
+
+    <!-- Payment Method Modal -->
+    <div id="paymentModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="paymentModalTitle">Choose Payment Method</h3>
+                <span class="close" onclick="closePaymentModal()">&times;</span>
+            </div>
+            <div class="modal-body">
+                <p id="paymentModalDescription">Select your preferred payment method:</p>
+                
+                <div class="payment-method-options">
+                    <!-- PayPal Option -->
+                    <div class="payment-method-card" onclick="payWithPayPal()">
+                        <div class="payment-method-icon">
+                            <i class="fab fa-paypal"></i>
+                        </div>
+                        <div class="payment-method-info">
+                            <h4>PayPal</h4>
+                            <p>Pay with credit card, debit card, or PayPal balance</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Venmo Option -->
+                    <div class="payment-method-card" onclick="payWithVenmo()">
+                        <div class="payment-method-icon">
+                            <i class="fab fa-venmo" style="font-size: 2rem;"></i>
+                            <!-- Fallback if Venmo icon doesn't load -->
+                            <span class="venmo-fallback" style="display: none;">V</span>
+                        </div>
+                        <div class="payment-method-info">
+                            <h4>Venmo</h4>
+                            <p>Quick mobile payment - opens Venmo app</p>
+                        </div>
+                    </div>
+                    
+                    <!-- CashApp Option -->
+                    <div class="payment-method-card" onclick="payWithCashApp()">
+                        <div class="payment-method-icon">
+                            <i class="fas fa-dollar-sign"></i>
+                        </div>
+                        <div class="payment-method-info">
+                            <h4>CashApp</h4>
+                            <p>Fast and simple mobile payment</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="js/script.js"></script>
     <script src="js/services.js"></script>
