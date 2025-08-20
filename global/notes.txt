@@ -72,8 +72,8 @@ ORGANIZED TASK BREAKDOWN - Website Updates
 ☑️ Task 37: Update Qigong service title to include "for Autism" on home page
 ☑️ Task 38: Combine "Healing Synergies" and tagline to look like a caption
 ☑️ Task 39: Fix About link navigation (currently goes to wrong spot)
-□ Task 40: Add donation button under donate section in 3-week challenge blog
-□ Task 41: Add "Read More" button to 3-week challenge service
+☑️ Task 40: Add donation button under donate section in 3-week challenge blog
+☑️ Task 41: Add "Read More" button to 3-week challenge service
 □ Task 42: Add content to "Cultivating Plants" blog and link videos
 □ Task 43: Fix banner sizing issue on Privacy section (not shrinking properly)
 □ Task 44: Center Cindy's picture in Gallery section
@@ -84,6 +84,7 @@ ORGANIZED TASK BREAKDOWN - Website Updates
 □ Task 49: Fix "Comprehensive Holistic Health Services" text sizing inconsistencies
 □ Task 50: Add new bio content under "Comprehensive Holistic Health Services"
 □ Task 51: Add icons to all recipe category tiles
+☑️ Task 52: Add service locations - Add two new addresses: 520 E Northwest Hwy, Ste 103, Grapevine, TX 76051 and 5751 Park Vista Cir, Fort Worth, TX 76244 (in addition to existing Rock+Rose Wellness location)
 
 🎯 PRIORITY ORDER RECOMMENDATIONS:
 1. Homepage text updates (Tasks 1-9) - Easy content changes
