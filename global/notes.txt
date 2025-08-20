@@ -81,9 +81,9 @@ ORGANIZED TASK BREAKDOWN - Website Updates
 ☑️ Task 46: Replace "Healing" with "Energy Work" in privacy policy (legal compliance)
 ☑️ Task 47: Replace "Diet" with "Education" throughout site
 ☑️ Task 48: Add cancellation policy: "No refunds within 24 hours of service"
-□ Task 49: Fix "Comprehensive Holistic Health Services" text sizing inconsistencies
-□ Task 50: Add new bio content under "Comprehensive Holistic Health Services"
-□ Task 51: Add icons to all recipe category tiles
+☑️ Task 49: Fix "Comprehensive Holistic Health Services" text sizing inconsistencies
+☑️ Task 50: Add new bio content under "Comprehensive Holistic Health Services"
+☑️ Task 51: Add icons to all recipe category tiles
 ☑️ Task 52: Add service locations - Add two new addresses: 520 E Northwest Hwy, Ste 103, Grapevine, TX 76051 and 5751 Park Vista Cir, Fort Worth, TX 76244 (in addition to existing Rock+Rose Wellness location)
 
 🎯 PRIORITY ORDER RECOMMENDATIONS:

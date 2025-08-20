@@ -334,6 +334,35 @@ p {
     color: white;
 }
 
+.btn-tertiary {
+    background: transparent;
+    color: #6B46C1;
+    border: 2px solid #6B46C1;
+    font-size: 0.9rem;
+}
+
+.btn-tertiary:hover {
+    background: #6B46C1;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Combined Description Styling */
+.combined-description {
+    margin-bottom: 2rem;
+}
+
+.combined-description p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.combined-description p:last-child {
+    margin-bottom: 0;
+}
+
 /* Sections */
 .section {
     padding: 80px 0;
