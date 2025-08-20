@@ -114,15 +114,88 @@ function payWithPayPal() {
 function payWithVenmo() {
     const { serviceName, duration, amount } = currentPaymentData;
     const note = encodeURIComponent(`${serviceName} ${duration}min - Healing Synergies`);
-    const venmoUrl = `venmo://paycharge?txn=pay&recipients=SuzEd&amount=${amount}&note=${note}`;
     
-    window.open(venmoUrl, '_blank');
+    // Check if user is on mobile device
+    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    
+    if (isMobile) {
+        // On mobile, try to open Venmo app
+        const venmoUrl = `venmo://paycharge?txn=pay&recipients=MSuzanne-Edmonson&amount=${amount}&note=${note}`;
+        window.location.href = venmoUrl;
+        
+        // Fallback to web version if app doesn't open
+        setTimeout(() => {
+            window.open(`https://venmo.com/MSuzanne-Edmonson`, '_blank');
+        }, 2000);
+        closePaymentModal();
+    } else {
+        // On desktop, show custom modal with options
+        showVenmoInstructions(serviceName, duration, amount);
+    }
+}
+
+function showVenmoInstructions(serviceName, duration, amount) {
+    // Close the payment modal first
     closePaymentModal();
+    
+    // Create Venmo instructions modal
+    const venmoModal = document.createElement('div');
+    venmoModal.id = 'venmoInstructionsModal';
+    venmoModal.className = 'modal';
+    venmoModal.innerHTML = `
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Venmo Payment Instructions</h3>
+                <span class="close" onclick="closeVenmoInstructions()">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div style="text-align: center; margin-bottom: 20px;">
+                    <i class="fab fa-venmo" style="font-size: 3rem; color: #3D95CE;"></i>
+                </div>
+                <p><strong>Payment Amount:</strong> $${amount}</p>
+                <p><strong>Send to:</strong> @MSuzanne-Edmonson</p>
+                <p><strong>Memo:</strong> ${serviceName} ${duration}min - Healing Synergies</p>
+                
+                <div style="margin: 20px 0; padding: 15px; background: #f8f9fa; border-radius: 8px;">
+                    <p style="margin: 0; color: #666; text-align: center;">
+                        <strong>Instructions:</strong> Use the Venmo mobile app to send this payment
+                    </p>
+                </div>
+                
+                <div style="display: flex; gap: 10px; justify-content: center;">
+                    <button onclick="openVenmoWeb()" class="btn btn-primary" style="background: #3D95CE;">
+                        <i class="fas fa-external-link-alt"></i> Open Venmo.com
+                    </button>
+                    <button onclick="closeVenmoInstructions()" class="btn btn-secondary">
+                        Close
+                    </button>
+                </div>
+            </div>
+        </div>
+    `;
+    
+    document.body.appendChild(venmoModal);
+    venmoModal.style.display = 'block';
+    document.body.style.overflow = 'hidden';
+}
+
+function openVenmoWeb() {
+    window.open(`https://venmo.com/MSuzanne-Edmonson`, '_blank');
+    closeVenmoInstructions();
+}
+
+function closeVenmoInstructions() {
+    const venmoModal = document.getElementById('venmoInstructionsModal');
+    if (venmoModal) {
+        venmoModal.style.display = 'none';
+        document.body.removeChild(venmoModal);
+        document.body.style.overflow = 'auto';
+    }
 }
 
 function payWithCashApp() {
     const { amount } = currentPaymentData;
-    const cashAppUrl = `https://cash.app/$SuzEd/${amount}`;
+    const cashAppUrl = `https://cash.app/$SuzyEdmonson/${amount}`;
     
     window.open(cashAppUrl, '_blank');
     closePaymentModal();
@@ -132,6 +205,7 @@ function payWithCashApp() {
 window.addEventListener('click', function(event) {
     const paymentModal = document.getElementById('paymentModal');
     const bookingModal = document.getElementById('bookingModal');
+    const venmoModal = document.getElementById('venmoInstructionsModal');
     
     if (event.target === paymentModal) {
         closePaymentModal();
@@ -139,12 +213,16 @@ window.addEventListener('click', function(event) {
     if (event.target === bookingModal) {
         closeBookingModal();
     }
+    if (event.target === venmoModal) {
+        closeVenmoInstructions();
+    }
 });
 
 document.addEventListener('keydown', function(event) {
     if (event.key === 'Escape') {
         closePaymentModal();
         closeBookingModal();
+        closeVenmoInstructions();
     }
 });
 
