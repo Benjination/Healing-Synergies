@@ -834,9 +834,32 @@ p {
     gap: 2rem;
 }
 
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #E2C4FF;
+}
+
 .design-credit {
     font-size: 0.9rem;
-    color: #ccc;
+    color: #4CAF50;
+    font-family: 'Dancing Script', cursive;
+    font-weight: 600;
+}
+
+.design-credit a {
+    color: #4CAF50;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.design-credit a:hover {
+    color: #66BB6A;
+    text-decoration: underline;
 }
 
 /* Desktop Navigation Behavior */

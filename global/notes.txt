@@ -77,10 +77,10 @@ ORGANIZED TASK BREAKDOWN - Website Updates
 ☑️ Task 42: Add content to "Cultivating Plants" blog and link videos
 ☑️ Task 43: Fix banner sizing issue on Privacy section (not shrinking properly)
 ☑️ Task 44: Center Cindy's picture in Gallery section
-□ Task 45: Change text color in Privacy/Legal sections for better readability
-□ Task 46: Replace "Healing" with "Energy Work" in privacy policy (legal compliance)
-□ Task 47: Replace "Diet" with "Education" throughout site
-□ Task 48: Add cancellation policy: "No refunds within 24 hours of service"
+☑️ Task 45: Change text color in Privacy/Legal sections for better readability
+☑️ Task 46: Replace "Healing" with "Energy Work" in privacy policy (legal compliance)
+☑️ Task 47: Replace "Diet" with "Education" throughout site
+☑️ Task 48: Add cancellation policy: "No refunds within 24 hours of service"
 □ Task 49: Fix "Comprehensive Holistic Health Services" text sizing inconsistencies
 □ Task 50: Add new bio content under "Comprehensive Holistic Health Services"
 □ Task 51: Add icons to all recipe category tiles
