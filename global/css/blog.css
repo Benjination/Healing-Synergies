@@ -395,3 +395,130 @@
         font-size: 1.2rem;
     }
 }
+
+/* Video Showcase Styles */
+.video-showcase {
+    margin: 3rem 0;
+}
+
+.video-month {
+    background: #f9f9f9;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    border-left: 4px solid #8B5A9F;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.video-month:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.video-month.special-edition {
+    background: linear-gradient(135deg, #FFE6F0 0%, #E2C4FF 100%);
+    border-left-color: #D196E0;
+}
+
+.video-month h3 {
+    color: #8B5A9F;
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.video-month h3 i {
+    color: #D196E0;
+}
+
+.video-links p {
+    margin-bottom: 0.8rem;
+    line-height: 1.6;
+}
+
+.video-link {
+    background: #8B5A9F;
+    color: white;
+    padding: 0.4rem 0.8rem;
+    border-radius: 6px;
+    text-decoration: none;
+    display: inline-block;
+    margin: 0.2rem;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+}
+
+.video-link:hover {
+    background: #D196E0;
+    text-decoration: none;
+    color: white;
+}
+
+.recipe-link {
+    font-style: italic;
+    margin-left: 0.5rem;
+}
+
+.recipe-link a {
+    color: #8B5A9F;
+    text-decoration: underline;
+}
+
+.recipe-link a:hover {
+    color: #D196E0;
+}
+
+.testimonial-highlight {
+    background: linear-gradient(135deg, #E2C4FF 0%, #F5E6FF 100%);
+    padding: 2rem;
+    border-radius: 12px;
+    margin: 3rem 0;
+    text-align: center;
+}
+
+.testimonial-highlight blockquote {
+    margin: 0;
+    font-style: italic;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.testimonial-highlight cite {
+    display: block;
+    margin-top: 1rem;
+    color: #8B5A9F;
+    font-weight: 600;
+}
+
+.call-to-action {
+    background: #8B5A9F;
+    color: white;
+    padding: 2.5rem;
+    border-radius: 12px;
+    text-align: center;
+    margin: 3rem 0;
+}
+
+.call-to-action h3 {
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.call-to-action p {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+}
+
+.call-to-action .btn {
+    background: white;
+    color: #8B5A9F;
+    border: 2px solid white;
+}
+
+.call-to-action .btn:hover {
+    background: transparent;
+    color: white;
+    border-color: white;
+}

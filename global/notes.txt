@@ -74,7 +74,7 @@ ORGANIZED TASK BREAKDOWN - Website Updates
 ☑️ Task 39: Fix About link navigation (currently goes to wrong spot)
 ☑️ Task 40: Add donation button under donate section in 3-week challenge blog
 ☑️ Task 41: Add "Read More" button to 3-week challenge service
-□ Task 42: Add content to "Cultivating Plants" blog and link videos
+☑️ Task 42: Add content to "Cultivating Plants" blog and link videos
 □ Task 43: Fix banner sizing issue on Privacy section (not shrinking properly)
 □ Task 44: Center Cindy's picture in Gallery section
 □ Task 45: Change text color in Privacy/Legal sections for better readability
