@@ -6,7 +6,7 @@
     <title>Raw Food, Radiant Life 3-Week Challenge - Healing Synergies Blog</title>
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/blog.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -80,14 +80,9 @@
         <p>If you are interested and have not yet signed up, you can contact me to register. However, because I want to extend this information to as many people as possible, you are welcome to peruse this page and use the materials without officially signing up for the 3-week challenge; in that event, please consider making a donation of any amount to support me in making this available.</p>
 
         <div class="donation-button" style="text-align: center; margin: 1.5rem 0;">
-            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-              <input type="hidden" name="cmd" value="_xclick" />
-              <input type="hidden" name="business" value="Jonsuzedmonson@att.net" />
-              <input type="hidden" name="item_name" value="3-Week Challenge Support Donation" />
-              <input type="hidden" name="currency_code" value="USD" />
-              <input type="hidden" name="amount" value="" />
-              <button type="submit" class="btn btn-primary" style="font-size:1.1em; padding:10px 24px;">Donate</button>
-            </form>
+            <button class="btn btn-primary" onclick="openDonationModal()" style="font-size:1.1em; padding:10px 24px;">
+                <i class="fas fa-heart"></i> Donate
+            </button>
         </div>
 
         <p>If you would like to officially participate in the challenge, which includes the support calls, you will need to register, and I am currently offering a discounted fee of $60.</p>
@@ -160,6 +155,214 @@
                 document.body.removeChild(link);
             }
         }
+
+        // Donation Modal Functions (same as homepage)
+        function openDonationModal() {
+            const modal = document.getElementById('donationModal');
+            modal.style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeDonationModal() {
+            const modal = document.getElementById('donationModal');
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        function getDonationAmount() {
+            const amount = document.getElementById('donationAmount').value;
+            if (!amount || amount <= 0) {
+                alert('Please enter a donation amount');
+                return null;
+            }
+            return parseFloat(amount);
+        }
+
+        function donateWithPayPal() {
+            const amount = getDonationAmount();
+            if (!amount) return;
+            
+            const form = document.createElement('form');
+            form.action = 'https://www.paypal.com/cgi-bin/webscr';
+            form.method = 'post';
+            form.target = '_top';
+            form.style.display = 'none';
+            
+            const fields = {
+                'cmd': '_xclick',
+                'business': 'Jonsuzedmonson@att.net',
+                'item_name': '3-Week Challenge Support Donation',
+                'currency_code': 'USD',
+                'amount': amount.toString()
+            };
+            
+            Object.entries(fields).forEach(([name, value]) => {
+                const input = document.createElement('input');
+                input.type = 'hidden';
+                input.name = name;
+                input.value = value;
+                form.appendChild(input);
+            });
+            
+            document.body.appendChild(form);
+            form.submit();
+            document.body.removeChild(form);
+            closeDonationModal();
+        }
+
+        function donateWithVenmo() {
+            const amount = getDonationAmount();
+            if (!amount) return;
+            
+            const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+            
+            if (isMobile) {
+                const note = encodeURIComponent(`3-Week Challenge Support - Healing Synergies`);
+                const venmoUrl = `venmo://paycharge?txn=pay&recipients=MSuzanne-Edmonson&amount=${amount}&note=${note}`;
+                window.location.href = venmoUrl;
+                
+                setTimeout(() => {
+                    window.open(`https://venmo.com/MSuzanne-Edmonson`, '_blank');
+                }, 2000);
+                closeDonationModal();
+            } else {
+                closeDonationModal();
+                showVenmoDonationInstructions(amount);
+            }
+        }
+
+        function donateWithCashApp() {
+            const amount = getDonationAmount();
+            if (!amount) return;
+            
+            const cashAppUrl = `https://cash.app/$SuzyEdmonson/${amount}`;
+            window.open(cashAppUrl, '_blank');
+            closeDonationModal();
+        }
+
+        function showVenmoDonationInstructions(amount) {
+            const venmoModal = document.createElement('div');
+            venmoModal.id = 'venmoDonationModal';
+            venmoModal.className = 'modal';
+            venmoModal.innerHTML = `
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3>Venmo Donation Instructions</h3>
+                        <span class="close" onclick="closeVenmoDonationInstructions()">&times;</span>
+                    </div>
+                    <div class="modal-body">
+                        <div style="text-align: center; margin-bottom: 20px;">
+                            <div style="display: inline-block; font-weight: bold; font-size: 3rem; color: #3D95CE; font-family: Arial, sans-serif; border: 3px solid #3D95CE; border-radius: 50%; width: 60px; height: 60px; text-align: center; line-height: 54px;">V</div>
+                        </div>
+                        <p><strong>Donation Amount:</strong> $${amount}</p>
+                        <p><strong>Send to:</strong> @MSuzanne-Edmonson</p>
+                        <p><strong>Memo:</strong> 3-Week Challenge Support - Healing Synergies</p>
+                        
+                        <div style="margin: 20px 0; padding: 15px; background: #f8f9fa; border-radius: 8px;">
+                            <p style="margin: 0; color: #666; text-align: center;">
+                                <strong>Instructions:</strong> Use the Venmo mobile app to send this donation
+                            </p>
+                        </div>
+                        
+                        <div style="display: flex; gap: 10px; justify-content: center;">
+                            <button onclick="window.open('https://venmo.com/MSuzanne-Edmonson', '_blank'); closeVenmoDonationInstructions();" class="btn btn-primary" style="background: #3D95CE;">
+                                <i class="fas fa-external-link-alt"></i> Open Venmo.com
+                            </button>
+                            <button onclick="closeVenmoDonationInstructions()" class="btn btn-secondary">
+                                Close
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            `;
+            
+            document.body.appendChild(venmoModal);
+            venmoModal.style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeVenmoDonationInstructions() {
+            const venmoModal = document.getElementById('venmoDonationModal');
+            if (venmoModal) {
+                venmoModal.style.display = 'none';
+                document.body.removeChild(venmoModal);
+                document.body.style.overflow = 'auto';
+            }
+        }
+
+        // Close modals on outside click and escape key
+        window.addEventListener('click', function(event) {
+            const donationModal = document.getElementById('donationModal');
+            const venmoModal = document.getElementById('venmoDonationModal');
+            
+            if (event.target === donationModal) {
+                closeDonationModal();
+            }
+            if (event.target === venmoModal) {
+                closeVenmoDonationInstructions();
+            }
+        });
+
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeDonationModal();
+                closeVenmoDonationInstructions();
+            }
+        });
     </script>
+
+    <!-- Donation Modal -->
+    <div id="donationModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Support the 3-Week Challenge</h3>
+                <span class="close" onclick="closeDonationModal()">&times;</span>
+            </div>
+            <div class="modal-body">
+                <p style="text-align: center; margin-bottom: 20px;">Thank you for supporting this free program! Your donation helps make this content available to everyone.</p>
+                
+                <div class="donation-amount-section" style="margin-bottom: 20px;">
+                    <label for="donationAmount" style="display: block; margin-bottom: 8px; font-weight: 600;">Donation Amount:</label>
+                    <input type="number" id="donationAmount" placeholder="Enter amount (e.g., 25)" style="width: 100%; padding: 10px; border: 2px solid #ddd; border-radius: 6px; font-size: 1rem;">
+                </div>
+                
+                <div class="payment-method-options">
+                    <!-- PayPal Option -->
+                    <div class="payment-method-card" onclick="donateWithPayPal()">
+                        <div class="payment-method-icon">
+                            <i class="fab fa-paypal"></i>
+                        </div>
+                        <div class="payment-method-info">
+                            <h4>PayPal</h4>
+                            <p>Pay with credit card, debit card, or PayPal balance</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Venmo Option -->
+                    <div class="payment-method-card" onclick="donateWithVenmo()">
+                        <div class="payment-method-icon">
+                            <div style="display: inline-block; font-weight: bold; font-size: 2rem; color: #3D95CE; font-family: Arial, sans-serif; border: 2px solid #3D95CE; border-radius: 50%; width: 40px; height: 40px; text-align: center; line-height: 36px;">V</div>
+                        </div>
+                        <div class="payment-method-info">
+                            <h4>Venmo</h4>
+                            <p>Mobile payment - opens app on mobile, web on desktop</p>
+                        </div>
+                    </div>
+                    
+                    <!-- CashApp Option -->
+                    <div class="payment-method-card" onclick="donateWithCashApp()">
+                        <div class="payment-method-icon">
+                            <i class="fas fa-dollar-sign"></i>
+                        </div>
+                        <div class="payment-method-info">
+                            <h4>CashApp</h4>
+                            <p>Fast and simple mobile payment</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </body>
 </html>
