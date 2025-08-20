@@ -591,6 +591,11 @@ p {
     display: block;
 }
 
+/* Specific positioning for Cindy's transformation photo */
+.gallery-item img[alt*="Cindy 3 Week"] {
+    object-position: top;
+}
+
 /* Recipes Section */
 .recipes-grid {
     display: grid;
