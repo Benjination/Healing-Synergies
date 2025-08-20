@@ -522,3 +522,20 @@
     color: white;
     border-color: white;
 }
+
+/* Download Links Styling */
+.download-link {
+    color: #8B5A9F;
+    text-decoration: underline;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.download-link:hover {
+    color: #D196E0;
+    text-decoration: none;
+    background-color: rgba(139, 90, 159, 0.1);
+    padding: 2px 4px;
+    border-radius: 3px;
+}

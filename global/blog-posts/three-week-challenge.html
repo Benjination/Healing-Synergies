@@ -64,7 +64,7 @@
             <li>Watch the recorded <a href="https://www.dropbox.com/s/vggyia5sj0ika40/Online-RFRL-recorded-%283%29%202-26-17.pptx?dl=0" target="_blank">PowerPoint</a> presentation (just over an hour)</li>
             <li>View the <a href="https://www.youtube.com/watch?v=peF6R9wu4Hg" target="_blank">Raw Food, Radiant Life!</a> food preparation recording</li>
             <li>Watch the documentary "Raw for Life" on YouTube (<a href="https://www.youtube.com/watch?v=uDnd_C8Hkp8&t=90s" target="_blank">part 1</a> and <a href="https://www.youtube.com/watch?v=eJPm9SCNhAs&t=346s" target="_blank">part 2</a>)</li>
-            <li>Download the program journal, phase chart, and recipes</li>
+            <li>Download the program journal, <a href="#" onclick="downloadPhaseChart()" class="download-link">phase chart</a>, and <a href="#" onclick="downloadRecipeBook()" class="download-link">recipes</a></li>
         </ol>
 
         <h2>More Than Just Education</h2>
@@ -138,5 +138,28 @@
     </footer>
 
     <script src="../js/script.js"></script>
+    <script>
+        function downloadPhaseChart() {
+            if (confirm('Would you like to download the Phase Chart? This will help guide you through the 3-week challenge phases.')) {
+                const link = document.createElement('a');
+                link.href = '../images/Phase Chart.jpeg';
+                link.download = 'Healing_Synergies_3_Week_Challenge_Phase_Chart.jpeg';
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+            }
+        }
+
+        function downloadRecipeBook() {
+            if (confirm('Would you like to download the Complete Recipe Book? This includes all raw food recipes to support your 3-week challenge.')) {
+                const link = document.createElement('a');
+                link.href = 'https://img1.wsimg.com/blobby/go/12c11c32-787f-4b77-9b20-ac65fcc063db/downloads/235bba47-babb-41f8-b0d1-293145eb6cba/Entire%20Recipe%20Book.docx?ver=1727981865780';
+                link.download = 'Healing_Synergies_Complete_Recipe_Book.docx';
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+            }
+        }
+    </script>
 </body>
 </html>
