@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services & Pricing - Healing Synergies | Dallas/Fort Worth, TX</title>
+    <meta name="description" content="Professional healing services including Swedish Massage, Ancient Rainbow Conscious Healing, Qigong Sensory Treatment for Autism, Thai Yoga Massage, Cranio Sacral Therapy, and Raw Food Retreats in Dallas/Fort Worth, TX.">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/services.css">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Open+Sans:wght@300;400;600&family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo-center">
+                <img src="images/healing-logo.png" alt="Healing Synergies" class="nav-logo-img" />
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="index.html#about" class="nav-link">About</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="blog.html" class="nav-link">Blog</a>
+                <a href="index.html#testimonials" class="nav-link">Testimonials</a>
+                <a href="index.html#gallery" class="nav-link">Gallery</a>
+                <a href="index.html#recipes" class="nav-link">Recipes</a>
+                <a href="index.html#contact" class="nav-link">Contact</a>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Services Hero Section -->
+    <section class="services-hero">
+        <div class="container">
+            <div class="services-hero-content">
+                <h1>Professional Healing Services</h1>
+                <p>Experience transformative healing through our comprehensive range of therapeutic services designed to restore balance and promote wellness.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Pricing Section -->
+    <section class="services-pricing section">
+        <div class="container">
+            <h2 class="section-title">Services & Pricing</h2>
+            <div class="pricing-grid">
+                
+                <!-- Swedish Massage -->
+                <div class="pricing-card">
+                    <div class="service-icon">
+                        <i class="fas fa-spa"></i>
+                    </div>
+                    <h3>Swedish Massage</h3>
+                    <p class="service-description">Therapeutic massage services to promote healing, relaxation, and muscle tension relief through traditional Swedish massage techniques.</p>
+                    <div class="pricing-options">
+                        <div class="price-option">
+                            <div class="price">$75</div>
+                            <div class="session-info">50 minutes</div>
+                            
+                            <!-- Payment Options -->
+                            <div class="payment-options">
+                                <button class="btn btn-payment pay-now-btn" onclick="openPaymentModal('Swedish Massage', 50, 75)">
+                                    <i class="fas fa-credit-card"></i> Pay Now - $75
+                                </button>
+                            </div>
+                        </div>
+                        <div class="price-option">
+                            <div class="price">$115</div>
+                            <div class="session-info">80 minutes</div>
+                            
+                            <!-- Payment Options -->
+                            <div class="payment-options">
+                                <button class="btn btn-payment pay-now-btn" onclick="openPaymentModal('Swedish Massage', 80, 115)">
+                                    <i class="fas fa-credit-card"></i> Pay Now - $115
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary book-btn" onclick="openBookingModal('Swedish Massage')">Book Now</button>
+                </div>
+
+                <!-- Infinite Oneness/Ancient Rainbow Conscious Healing -->
+                <div class="pricing-card">
+                    <div class="service-icon">
+                        <i class="fas fa-rainbow"></i>
+                    </div>
+                    <h3>Infinite Oneness/Ancient Rainbow Conscious Healing</h3>
+                    <p class="service-description">Transformative energy healing modality for spiritual and emotional well-being, promoting deep healing and consciousness expansion.</p>
+                    <div class="pricing-options">
+                        <div class="price-option">
+                            <div class="price">$75</div>
+                            <div class="session-info">50 minutes</div>
+                            
+                            <!-- Payment Options -->
+                            <div class="payment-options">
+                                <button class="btn btn-payment pay-now-btn" onclick="openPaymentModal('Ancient Rainbow Conscious Healing', 50, 75)">
+                                    <i class="fas fa-credit-card"></i> Pay Now - $75
+                                </button>
+                            </div>
+                        </div>
+                        <div class="price-option">
+                            <div class="price">$115</div>
+                            <div class="session-info">80 minutes</div>
+                            
+                            <!-- Payment Options -->
+                            <div class="payment-options">
+                                <button class="btn btn-payment pay-now-btn" onclick="openPaymentModal('Ancient Rainbow Conscious Healing', 80, 115)">
+                                    <i class="fas fa-credit-card"></i> Pay Now - $115
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary book-btn" onclick="openBookingModal('Infinite Oneness/Ancient Rainbow Conscious Healing')">Book Now</button>
+                </div>
+
+                <!-- Qigong Sensory Treatment (QST) -->
+                <div class="pricing-card">
+                    <div class="service-icon">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <h3>Qigong Sensory Treatment for Autism</h3>
+                    <p class="service-description">Evidence-based form of touch therapy co-developed by Louisa Silva, MD. Parents are instructed in this very effective 15-minute touch therapy, which is then performed daily by the parent(s). QST is performed through the clothes, using gentle patting or tapping along acupressure lines. This gentle method assists in normalizing sensory issues, decreasing symptoms, promoting overall childhood development, and improving life outcomes. QST helps children with autism feel more comfortable and connected. More information, including research, at <a href="https://Qsti.org" target="_blank">Qsti.org</a>.</p>
+                    <div class="price">$75</div>
+                    <div class="session-info">Per Session</div>
+                    
+                    <!-- Payment Options -->
+                    <div class="payment-options">
+                        <button class="btn btn-payment pay-now-btn" onclick="openPaymentModal('Qigong Sensory Treatment for Autism', 60, 75)">
+                            <i class="fas fa-credit-card"></i> Pay Now - $75
+                        </button>
+                    </div>
+                    
+                    <button class="btn btn-primary book-btn" onclick="openBookingModal('Qigong Sensory Treatment (QST)')">Book Now</button>
+                </div>
+
+                <!-- Thai Yoga Massage -->
+                <div class="pricing-card">
+                    <div class="service-icon">
+                        <i class="fas fa-om"></i>
+                    </div>
+                    <h3>Thai Yoga Massage</h3>
+                    <p class="service-description">An ancient practice that, as the name implies, includes elements of both massage and yoga, providing benefits of both. The method is practiced with the client fully clothed, lying on a padded floor mat. Using hands, feet, and forearms, the therapist applies pressure to the muscles and energy pathways of the body, along with gently stretching the body. This promotes deep relaxation, as well as pain relief, flexibility, and an overall sense of wellbeing.</p>
+                    <div class="pricing-options">
+                        <div class="price-option">
+                            <div class="price">$75</div>
+                            <div class="session-info">50 minutes</div>
+                            
+                            <!-- Payment Options -->
+                            <div class="payment-options">
+                                <button class="btn btn-payment pay-now-btn" onclick="openPaymentModal('Thai Yoga Massage', 50, 75)">
+                                    <i class="fas fa-credit-card"></i> Pay Now - $75
+                                </button>
+                            </div>
+                        </div>
+                        <div class="price-option">
+                            <div class="price">$115</div>
+                            <div class="session-info">80 minutes</div>
+                            
+                            <!-- Payment Options -->
+                            <div class="payment-options">
+                                <button class="btn btn-payment pay-now-btn" onclick="openPaymentModal('Thai Yoga Massage', 80, 115)">
+                                    <i class="fas fa-credit-card"></i> Pay Now - $115
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary book-btn" onclick="openBookingModal('Thai Yoga Massage')">Book Now</button>
+                </div>
+
+                <!-- Cranio Sacral Therapy -->
+                <div class="pricing-card">
+                    <div class="service-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>Cranio Sacral Therapy</h3>
+                    <p class="service-description">Gentle therapy focusing on the craniosacral system for deep healing, stress relief, and nervous system balance.</p>
+                    <div class="pricing-options">
+                        <div class="price-option">
+                            <div class="price">$75</div>
+                            <div class="session-info">50 minutes</div>
+                            
+                            <!-- Payment Options -->
+                            <div class="payment-options">
+                                <button class="btn btn-payment pay-now-btn" onclick="openPaymentModal('Cranio Sacral Therapy', 50, 75)">
+                                    <i class="fas fa-credit-card"></i> Pay Now - $75
+                                </button>
+                            </div>
+                        </div>
+                        <div class="price-option">
+                            <div class="price">$115</div>
+                            <div class="session-info">80 minutes</div>
+                            
+                            <!-- Payment Options -->
+                            <div class="payment-options">
+                                <button class="btn btn-payment pay-now-btn" onclick="openPaymentModal('Cranio Sacral Therapy', 80, 115)">
+                                    <i class="fas fa-credit-card"></i> Pay Now - $115
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary book-btn" onclick="openBookingModal('Cranio Sacral Therapy')">Book Now</button>
+                </div>
+
+                <!-- Raw Food Retreats -->
+                <div class="pricing-card special">
+                    <div class="service-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>Raw Food Retreats</h3>
+                    <p class="service-description">Immersive experiences in raw food preparation and healthy lifestyle practices, designed to transform your relationship with food and health.</p>
+                    <div class="price">Contact for Pricing</div>
+                    <div class="session-info">Custom Programs</div>
+                    <button class="btn btn-primary book-btn" onclick="openBookingModal('Raw Food Retreats')">Contact Us</button>
+                </div>
+
+                    <!-- Raw Food, Radiant Life 3-Week Challenge -->
+                    <div class="pricing-card special">
+                        <div class="service-icon">
+                            <i class="fas fa-seedling"></i>
+                        </div>
+                        <h3>Raw Food, Radiant Life 3-Week Challenge</h3>
+                        <p class="service-description">Transform your health and lifestyle in just three weeks! This immersive program guides you through preparing delicious raw vegan meals, adopting healthy habits, and experiencing the benefits of a plant-based education program. Personalized support and resources are provided throughout the challenge.</p>
+                        <div class="price">Contact for Pricing</div>
+                        <div class="session-info">3-Week Program</div>
+                        <div class="service-buttons" style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
+                            <a href="blog-posts/three-week-challenge.html" class="btn btn-secondary" style="font-size: 0.9em; padding: 8px 16px;">Read More</a>
+                            <button class="btn btn-primary book-btn" onclick="openBookingModal('Raw Food, Radiant Life 3-Week Challenge')">Contact Us</button>
+                        </div>
+                    </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Modal -->
+    <div id="bookingModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeBookingModal()">&times;</span>
+            <h2>Book Your Session</h2>
+            <p id="selectedService">Selected Service: </p>
+            <form action="https://formspree.io/f/xrbldlew" method="POST" class="booking-form">
+                <div class="form-group">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" name="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <input type="tel" name="phone" placeholder="Your Phone" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" name="preferred-date" placeholder="Preferred Date/Time">
+                </div>
+                <div class="form-group">
+                    <textarea name="message" placeholder="Additional Notes or Questions" rows="4"></textarea>
+                </div>
+                <input type="hidden" name="service" id="serviceInput" value="">
+                <input type="hidden" name="_subject" value="New Service Booking from Healing Synergies Website">
+                <button type="submit" class="btn btn-primary">Send Booking Request</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="images/healing-logo.png" alt="Healing Synergies Logo" class="footer-logo-img" />
+                        <h3>Healing Synergies</h3>
+                    </div>
+                    <p>Your partner in holistic health and wellness.</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/profile.php?id=100063490456216" target="_blank" aria-label="Facebook">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@jonsuzedmonson" target="_blank" aria-label="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="index.html#gallery">Gallery</a></li>
+                        <li><a href="index.html#recipes">Recipes</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p><a href="tel:8179969961">(817) 996-9961</a></p>
+                    <p><a href="mailto:healingsynergies@gmail.com">healingsynergies@gmail.com</a></p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Healing Synergies - All Rights Reserved.</p>
+                <div class="footer-links">
+                    <a href="legal.html">Privacy Policy</a>
+                    <a href="legal.html">Terms and Conditions</a>
+                </div>
+                <p class="design-credit">Design by <a href="https://BenjaminNiccum.com" target="_blank">BNiccum</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Payment Method Modal -->
+    <div id="paymentModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="paymentModalTitle">Choose Payment Method</h3>
+                <span class="close" onclick="closePaymentModal()">&times;</span>
+            </div>
+            <div class="modal-body">
+                <p id="paymentModalDescription">Select your preferred payment method:</p>
+                
+                <div class="payment-method-options">
+                    <!-- PayPal Option -->
+                    <div class="payment-method-card" onclick="payWithPayPal()">
+                        <div class="payment-method-icon">
+                            <i class="fab fa-paypal"></i>
+                        </div>
+                        <div class="payment-method-info">
+                            <h4>PayPal</h4>
+                            <p>Pay with credit card, debit card, or PayPal balance</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Venmo Option -->
+                    <div class="payment-method-card" onclick="payWithVenmo()">
+                        <div class="payment-method-icon">
+                            <div style="display: inline-block; font-weight: bold; font-size: 2rem; color: #3D95CE; font-family: Arial, sans-serif; border: 2px solid #3D95CE; border-radius: 50%; width: 40px; height: 40px; text-align: center; line-height: 36px;">V</div>
+                        </div>
+                        <div class="payment-method-info">
+                            <h4>Venmo</h4>
+                            <p>Mobile payment - opens app on mobile, web on desktop</p>
+                        </div>
+                    </div>
+                    
+                    <!-- CashApp Option -->
+                    <div class="payment-method-card" onclick="payWithCashApp()">
+                        <div class="payment-method-icon">
+                            <i class="fas fa-dollar-sign"></i>
+                        </div>
+                        <div class="payment-method-info">
+                            <h4>CashApp</h4>
+                            <p>Fast and simple mobile payment</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+    <script src="js/services.js"></script>
+</body>
+</html>

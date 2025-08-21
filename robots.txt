@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://benjination.github.io/Healing-Synergies/sitemap.xml

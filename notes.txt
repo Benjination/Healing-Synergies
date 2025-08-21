@@ -1,7 +1,26 @@
 Ben Website
 Home page: 
 LLC, Healing Synergies-Add Bio:
-Suzy began her healing studies in a conventional way as an occupational therapist in 1985 and within a decade became interested in and then immersed in complementary methods pursuing various training programs. Suzy is  a registered massage therapist, Reiki/ARCH practitioner/teacher, and a certified yoga teacher. Suzy completed a master's level Spiritual Nutrition program through renowned holistic physician, Gabriel Cousens, MD. She is a Spiritual Nutrition Counselor and a certified raw vegan health coach. Following a raw vegan diet, Suzy recovered from a severe autoimmune disease is also a cancer survivor for over a decade. Suzy is passionate about all things healing and empowering others to live as healthy and happy lives as possible!
+Suzy began her healing studies in a conventional way as an🔄 NEW CLIENT REQUESTS - ROUND 3
+------------------------------
+
+⬜ Task 53: Crop Cindy's picture to show both her face and the T-shirt.
+⬜ Task 54: For the online three-week challenge:
+   - Replace "contact for pricing" with "Free online resources. 
+      Contact for Health Coaching"
+   - Change the price to $199 under the donate button.
+   - Add "twice weekly" before "the support calls".
+   - Omit "program journal" under getting started.
+⬜ Task 55: Replace "service locations" with "Serving the Dallas 
+   Fort Worth area in three locations" for SEO.
+⬜ Task 56: Add Suzy's health journey to the menu and link to the blog 
+   post.
+⬜ Task 57: Replace the current healing journey blog post with the bio 
+   you emailed.
+⬜ Task 58: Fix Joe's blog post picture so faces show up completely.
+⬜ Task 59: In the recipe section, separate soups from nuts and snacks 
+   into two categories.
+⬜ Task 60: Under dessert success tips:ist in 1985 and within a decade became interested in and then immersed in complementary methods pursuing various training programs. Suzy is  a registered massage therapist, Reiki/ARCH practitioner/teacher, and a certified yoga teacher. Suzy completed a master's level Spiritual Nutrition program through renowned holistic physician, Gabriel Cousens, MD. She is a Spiritual Nutrition Counselor and a certified raw vegan health coach. Following a raw vegan diet, Suzy recovered from a severe autoimmune disease is also a cancer survivor for over a decade. Suzy is passionate about all things healing and empowering others to live as healthy and happy lives as possible!
 
 ================================================================================
 ORGANIZED TASK BREAKDOWN - Website Updates
@@ -25,7 +44,6 @@ ORGANIZED TASK BREAKDOWN - Website Updates
 ☑️ Task 11: Add special QST pricing structure (kept at $75 per session)
 
 🔧 SERVICE ADDITIONS
--------------------
 ☑️ Task 12: Add Qigong Sensory Treatment (QST) service with provided description (replaced Qigong Massage)
 ☑️ Task 13: Add Thai Yoga Massage service with provided description
 
@@ -42,7 +60,7 @@ ORGANIZED TASK BREAKDOWN - Website Updates
 ☑️ Task 19: Delete blog posts: "Rejuv retreat", "Testimonials", "Raw food radiant"
 ☑️ Task 20: Delete blog posts 2, 3, 4
 ⓧ Task 21: Monetize "Cultivating Plants" content
-□ Task 22: Find and add hyperlinks for 3-week challenge
+☑️ Task 22: Find and add hyperlinks for 3-week challenge
 ☑️ Task 23: Add content to challenge section
 
 🌈 ARCH SERVICE UPDATES
@@ -67,7 +85,7 @@ ORGANIZED TASK BREAKDOWN - Website Updates
 
 🔄 NEW CLIENT REQUESTS - ROUND 2
 ------------------------------
-□ Task 35: Research and add alternative payment options (Venmo, CashApp, Zelle)
+☑️ Task 35: Research and add alternative payment options (Venmo, CashApp, Zelle)
 ☑️ Task 36: Change hamburger menu links to display horizontally instead of vertically
 ☑️ Task 37: Update Qigong service title to include "for Autism" on home page
 ☑️ Task 38: Combine "Healing Synergies" and tagline to look like a caption
@@ -84,7 +102,10 @@ ORGANIZED TASK BREAKDOWN - Website Updates
 ☑️ Task 49: Fix "Comprehensive Holistic Health Services" text sizing inconsistencies
 ☑️ Task 50: Add new bio content under "Comprehensive Holistic Health Services"
 ☑️ Task 51: Add icons to all recipe category tiles
-☑️ Task 52: Add service locations - Add two new addresses: 520 E Northwest Hwy, Ste 103, Grapevine, TX 76051 and 5751 Park Vista Cir, Fort Worth, TX 76244 (in addition to existing Rock+Rose Wellness location)
+☑️ Task 52: Add service locations - Add two new addresses: 
+   520 E Northwest Hwy, Ste 103, Grapevine, TX 76051 and 
+   5751 Park Vista Cir, Fort Worth, TX 76244 
+   (in addition to existing Rock+Rose Wellness location)
 
 🎯 PRIORITY ORDER RECOMMENDATIONS:
 1. Homepage text updates (Tasks 1-9) - Easy content changes
@@ -107,6 +128,38 @@ ORGANIZED TASK BREAKDOWN - Website Updates
 - Payment Integration: 3-4 hours
 
 TOTAL ESTIMATED: 13-17 hours additional work
+
+Round 3 Tasks (August 21, 2025)
+
+🔄 NEW CLIENT REQUESTS - ROUND 3
+------------------------------
+
+☑️ Task 53: Crop Cindy’s picture to show both her face and the T-shirt.
+☑️ Task 54: For the online three-week challenge:
+   - Replace "contact for pricing" with “Free online resources. 
+      Contact for Health Coaching”
+   - Change the price to $199 under the donate button.
+   - Add “twice weekly” before “the support calls”.
+   - Omit “program journal” under getting started.
+☑️ Task 55: Replace “service locations” with “Serving the Dallas 
+   Fort Worth area in three locations” for SEO.
+☑️ Task 56: Add Suzy’s health journey to the menu and link to the blog 
+   post.
+☑️ Task 57: Replace the current healing journey blog post with the bio 
+   you emailed.
+☑️ Task 58: Fix Joe’s blog post picture so faces show up completely.
+☑️ Task 59: In the recipe section, separate soups from nuts and snacks 
+   into two categories.
+☑️ Task 60: Under dessert success tips:
+   - Change natural sweeteners to “use stevia, monk fruit, or low
+      glycemic fruits, such as berries, for natural sweetness with 
+      lower impact on blood sugar levels.”
+   - Change texture tip to “Soak nuts overnight for improved 
+      nutrition, as well as ultra–smooth texture in raw desserts. A 
+      high-speed blender makes all the difference!”
+   - Add to balance tip: “Balance sweet flavors with a pinch of sea 
+      salt and fresh lemon or lime juice for complex, satisfying 
+      desserts.”
 
 
 
