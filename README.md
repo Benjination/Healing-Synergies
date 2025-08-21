@@ -1,6 +1,6 @@
 # Healing Synergies
 
-[![Website](https://img.shields.io/badge/Website-Live-brightgreen)](https://benjination.github.io/Healing-Synergies/)
+[![Website](https://img.shields.io/badge/Website-Live-brightgreen)](https://healingsynergies.com)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 ## About
