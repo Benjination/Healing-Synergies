@@ -87,16 +87,16 @@ const galleryImages = [
 function loadGallery() {
     const galleryGrid = document.getElementById('gallery-grid');
     if (galleryGrid) {
-        galleryImages.forEach(image => {
+        galleryImages.forEach((image, index) => {
             const galleryItem = document.createElement('div');
             galleryItem.className = 'gallery-item';
             galleryItem.innerHTML = `
                 <img src="${image.src}" alt="${image.alt}" loading="lazy">
             `;
             
-            // Add click event for image modal/lightbox (optional enhancement)
+            // Add click event for lightbox
             galleryItem.addEventListener('click', () => {
-                openImageModal(image.src, image.alt);
+                openLightbox(index);
             });
             
             galleryGrid.appendChild(galleryItem);
@@ -104,88 +104,249 @@ function loadGallery() {
     }
 }
 
-// Simple image modal functionality
-function openImageModal(src, alt) {
-    // Create modal overlay
-    const modal = document.createElement('div');
-    modal.className = 'image-modal';
-    modal.innerHTML = `
-        <div class="modal-content">
-            <span class="close-modal">&times;</span>
-            <img src="${src}" alt="${alt}">
-            <p>${alt}</p>
+// Enhanced lightbox functionality
+let currentImageIndex = 0;
+let lightboxModal = null;
+
+function openLightbox(index) {
+    currentImageIndex = index;
+    
+    // Create lightbox if it doesn't exist
+    if (!lightboxModal) {
+        createLightbox();
+    }
+    
+    // Update the image and show lightbox
+    updateLightboxImage();
+    lightboxModal.style.display = 'flex';
+    document.body.style.overflow = 'hidden'; // Prevent background scrolling
+}
+
+function createLightbox() {
+    lightboxModal = document.createElement('div');
+    lightboxModal.className = 'lightbox-modal';
+    lightboxModal.innerHTML = `
+        <div class="lightbox-content">
+            <span class="lightbox-close">&times;</span>
+            <div class="lightbox-nav lightbox-prev">
+                <i class="fas fa-chevron-left"></i>
+            </div>
+            <div class="lightbox-nav lightbox-next">
+                <i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="lightbox-image-container">
+                <img src="" alt="" class="lightbox-image">
+            </div>
+            <div class="lightbox-caption"></div>
+            <div class="lightbox-counter"></div>
         </div>
     `;
     
-    // Add modal styles
-    modal.style.cssText = `
+    // Add lightbox styles
+    lightboxModal.style.cssText = `
         position: fixed;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
-        background: rgba(0,0,0,0.8);
-        display: flex;
+        background: rgba(0,0,0,0.9);
+        display: none;
         justify-content: center;
         align-items: center;
         z-index: 2000;
+        opacity: 0;
+        transition: opacity 0.3s ease;
     `;
     
-    const modalContent = modal.querySelector('.modal-content');
-    modalContent.style.cssText = `
+    const lightboxContent = lightboxModal.querySelector('.lightbox-content');
+    lightboxContent.style.cssText = `
         position: relative;
-        max-width: 90%;
-        max-height: 90%;
-        text-align: center;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        box-sizing: border-box;
     `;
     
-    const modalImage = modal.querySelector('img');
-    modalImage.style.cssText = `
-        max-width: 100%;
+    const lightboxImage = lightboxModal.querySelector('.lightbox-image');
+    lightboxImage.style.cssText = `
+        max-width: 90%;
         max-height: 80vh;
         object-fit: contain;
+        border-radius: 8px;
+        box-shadow: 0 8px 32px rgba(0,0,0,0.5);
     `;
     
-    const closeButton = modal.querySelector('.close-modal');
+    const closeButton = lightboxModal.querySelector('.lightbox-close');
     closeButton.style.cssText = `
         position: absolute;
-        top: -40px;
-        right: 0;
+        top: 20px;
+        right: 30px;
         color: white;
-        font-size: 30px;
+        font-size: 40px;
+        font-weight: bold;
         cursor: pointer;
+        z-index: 2001;
+        transition: color 0.3s ease;
     `;
     
-    const caption = modal.querySelector('p');
+    const navButtons = lightboxModal.querySelectorAll('.lightbox-nav');
+    navButtons.forEach(btn => {
+        btn.style.cssText = `
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255,255,255,0.2);
+            color: white;
+            border: none;
+            padding: 20px 15px;
+            font-size: 24px;
+            cursor: pointer;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+            z-index: 2001;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        `;
+    });
+    
+    const prevButton = lightboxModal.querySelector('.lightbox-prev');
+    prevButton.style.left = '30px';
+    
+    const nextButton = lightboxModal.querySelector('.lightbox-next');
+    nextButton.style.right = '30px';
+    
+    const caption = lightboxModal.querySelector('.lightbox-caption');
     caption.style.cssText = `
         color: white;
-        margin-top: 10px;
-        font-size: 14px;
+        font-size: 16px;
+        margin-top: 20px;
+        text-align: center;
+        max-width: 90%;
     `;
     
-    document.body.appendChild(modal);
+    const counter = lightboxModal.querySelector('.lightbox-counter');
+    counter.style.cssText = `
+        color: white;
+        font-size: 14px;
+        margin-top: 10px;
+        opacity: 0.8;
+    `;
     
-    // Close modal events
-    closeButton.addEventListener('click', () => {
-        document.body.removeChild(modal);
-    });
+    // Add event listeners
+    closeButton.addEventListener('click', closeLightbox);
+    prevButton.addEventListener('click', showPrevImage);
+    nextButton.addEventListener('click', showNextImage);
     
-    modal.addEventListener('click', (e) => {
-        if (e.target === modal) {
-            document.body.removeChild(modal);
+    // Close on background click
+    lightboxModal.addEventListener('click', (e) => {
+        if (e.target === lightboxModal) {
+            closeLightbox();
         }
     });
     
-    // Close on escape key
-    const escapeHandler = (e) => {
-        if (e.key === 'Escape') {
-            if (document.body.contains(modal)) {
-                document.body.removeChild(modal);
-            }
-            document.removeEventListener('keydown', escapeHandler);
-        }
-    };
-    document.addEventListener('keydown', escapeHandler);
+    // Add hover effects
+    closeButton.addEventListener('mouseenter', () => {
+        closeButton.style.color = '#ff6b6b';
+    });
+    closeButton.addEventListener('mouseleave', () => {
+        closeButton.style.color = 'white';
+    });
+    
+    navButtons.forEach(btn => {
+        btn.addEventListener('mouseenter', () => {
+            btn.style.background = 'rgba(255,255,255,0.3)';
+            btn.style.transform = 'translateY(-50%) scale(1.1)';
+        });
+        btn.addEventListener('mouseleave', () => {
+            btn.style.background = 'rgba(255,255,255,0.2)';
+            btn.style.transform = 'translateY(-50%) scale(1)';
+        });
+    });
+    
+    document.body.appendChild(lightboxModal);
+}
+
+function updateLightboxImage() {
+    if (!lightboxModal) return;
+    
+    const image = lightboxModal.querySelector('.lightbox-image');
+    const caption = lightboxModal.querySelector('.lightbox-caption');
+    const counter = lightboxModal.querySelector('.lightbox-counter');
+    const prevButton = lightboxModal.querySelector('.lightbox-prev');
+    const nextButton = lightboxModal.querySelector('.lightbox-next');
+    
+    const currentImage = galleryImages[currentImageIndex];
+    
+    image.src = currentImage.src;
+    image.alt = currentImage.alt;
+    caption.textContent = currentImage.alt;
+    counter.textContent = `${currentImageIndex + 1} / ${galleryImages.length}`;
+    
+    // Show/hide navigation buttons based on position
+    prevButton.style.display = currentImageIndex > 0 ? 'flex' : 'none';
+    nextButton.style.display = currentImageIndex < galleryImages.length - 1 ? 'flex' : 'none';
+    
+    // Trigger fade in animation
+    setTimeout(() => {
+        lightboxModal.style.opacity = '1';
+    }, 10);
+}
+
+function showPrevImage() {
+    if (currentImageIndex > 0) {
+        currentImageIndex--;
+        updateLightboxImage();
+    }
+}
+
+function showNextImage() {
+    if (currentImageIndex < galleryImages.length - 1) {
+        currentImageIndex++;
+        updateLightboxImage();
+    }
+}
+
+function closeLightbox() {
+    if (lightboxModal) {
+        lightboxModal.style.opacity = '0';
+        setTimeout(() => {
+            lightboxModal.style.display = 'none';
+            document.body.style.overflow = ''; // Restore background scrolling
+        }, 300);
+    }
+}
+
+// Keyboard navigation
+document.addEventListener('keydown', (e) => {
+    if (!lightboxModal || lightboxModal.style.display === 'none') return;
+    
+    switch(e.key) {
+        case 'Escape':
+            closeLightbox();
+            break;
+        case 'ArrowLeft':
+            showPrevImage();
+            break;
+        case 'ArrowRight':
+            showNextImage();
+            break;
+    }
+});
+
+// Simple image modal functionality (keeping for compatibility)
+function openImageModal(src, alt) {
+    // Find the index of the image and open lightbox
+    const index = galleryImages.findIndex(img => img.src === src);
+    if (index !== -1) {
+        openLightbox(index);
+    }
 }
 
 // Contact form submission
