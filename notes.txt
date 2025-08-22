@@ -4,7 +4,19 @@ LLC, Healing Synergies-Add Bio:
 Suzy began her healing studies in a conventional way as 
 <Textmissing>
 
-nist in 1985 and within a decade became 
+nist in 1985 and within a decad️☑️ Task 61: Gallery Enhancement: Added full lightbox functionality with navigation
+Task 62: Add an additional tab under services and pricing entitled 
+   "Health Coaching" with description "Personalized coaching to 
+   transform your health, designed with your individual needs in mind" 
+   Fee: $75/hour
+Task 63: On homepage, please change Raw Food Retreats service to 
+   "Raw Vegan Education & Health Coaching"
+Task 64: Under services and payments, raw food, radiant life, three 
+   week challenge, please add in italics underneath the title, 
+   "and free online resources!"
+Task 65: Please put Raw food Retreats last in the list of services.
+Task 66: Add a pay now button to the raw food radiant life three week 
+   challenge and make the background whitee 
    interested in and then immersed in complementary methods pursuing 
    various training programs. Suzy is  a registered massage therapist, 
    Reiki/ARCH practitioner/teacher, and a certified yoga teacher. 
@@ -157,9 +169,13 @@ Round 3 Tasks (August 21, 2025)
    - Add to balance tip: “Balance sweet flavors with a pinch of sea 
       salt and fresh lemon or lime juice for complex, satisfying 
       desserts.”
+️☑️ Task 61: Gallery Enhancement: Added full lightbox functionality with navigation
 
-
-
+1. Please add an additional tab under services and pricing entitled “Health Coaching” “Personalized coaching to transform your health, designed with your individual needs in mind” Fee: $75/hour
+2. On homepage, please change Raw Food Retreats service to Raw Vegan Education & Health Coaching
+3. Under services and payments, raw food, radiant life, three week challenge, please add in italics underneath the title, “and free online resources!” 
+4. Please put Raw food Retreats last in the list of services.
+5. Add a pay now button to the raw food radiant life three week challenge and make the background white
 
 
 ================================================================================
