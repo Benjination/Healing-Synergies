@@ -30,3 +30,47 @@ npm-debug.log*
 
 # Screenshots that are not part of the gallery
 Screenshot*.png
+
+# Development files
+node_modules/
+package.json
+package-lock.json
+server.js
+debug.html
+test.html
+
+# Environment and configuration files
+.env
+.env.local
+.env.development
+.env.production
+*.config.js
+config.json
+
+# Personal notes and private documentation
+notes.txt
+private-notes/
+personal/
+
+# Analytics and tracking files
+analytics/
+tracking/
+
+# Email and contact list exports
+*.csv
+*.xlsx
+contacts/
+
+# Private images or documents not for public repo
+private-images/
+documents/
+*.docx
+*.pdf
+
+# Any file containing sensitive data patterns
+*secret*
+*password*
+*private*
+*key*
+*token*
+*credential*

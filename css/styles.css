@@ -622,7 +622,8 @@ p {
 
 /* Specific positioning for Cindy's transformation photo */
 .gallery-item img[alt*="Cindy 3 Week"] {
-    object-position: center 25%;
+    object-position: center 35%;
+    object-fit: cover;
 }
 
 /* Recipes Section */
