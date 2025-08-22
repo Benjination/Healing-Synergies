@@ -51,6 +51,7 @@ config.json
 notes.txt
 private-notes/
 personal/
+global/
 
 # Analytics and tracking files
 analytics/
