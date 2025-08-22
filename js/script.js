@@ -130,9 +130,11 @@ function createLightbox() {
             <span class="lightbox-close">&times;</span>
             <div class="lightbox-nav lightbox-prev">
                 <i class="fas fa-chevron-left"></i>
+                <span style="display: none;">‹</span>
             </div>
             <div class="lightbox-nav lightbox-next">
                 <i class="fas fa-chevron-right"></i>
+                <span style="display: none;">›</span>
             </div>
             <div class="lightbox-image-container">
                 <img src="" alt="" class="lightbox-image">
@@ -199,20 +201,21 @@ function createLightbox() {
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
-            background: rgba(255,255,255,0.2);
+            background: rgba(0,0,0,0.6);
             color: white;
-            border: none;
-            padding: 20px 15px;
-            font-size: 24px;
+            border: 2px solid rgba(255,255,255,0.3);
+            padding: 15px;
+            font-size: 28px;
             cursor: pointer;
             border-radius: 50%;
             transition: all 0.3s ease;
             z-index: 2001;
-            width: 60px;
-            height: 60px;
+            width: 70px;
+            height: 70px;
             display: flex;
             align-items: center;
             justify-content: center;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
         `;
     });
     
@@ -261,12 +264,16 @@ function createLightbox() {
     
     navButtons.forEach(btn => {
         btn.addEventListener('mouseenter', () => {
-            btn.style.background = 'rgba(255,255,255,0.3)';
+            btn.style.background = 'rgba(255,255,255,0.9)';
+            btn.style.color = '#333';
             btn.style.transform = 'translateY(-50%) scale(1.1)';
+            btn.style.borderColor = 'rgba(255,255,255,0.8)';
         });
         btn.addEventListener('mouseleave', () => {
-            btn.style.background = 'rgba(255,255,255,0.2)';
+            btn.style.background = 'rgba(0,0,0,0.6)';
+            btn.style.color = 'white';
             btn.style.transform = 'translateY(-50%) scale(1)';
+            btn.style.borderColor = 'rgba(255,255,255,0.3)';
         });
     });
     
@@ -289,9 +296,9 @@ function updateLightboxImage() {
     caption.textContent = currentImage.alt;
     counter.textContent = `${currentImageIndex + 1} / ${galleryImages.length}`;
     
-    // Show/hide navigation buttons based on position
-    prevButton.style.display = currentImageIndex > 0 ? 'flex' : 'none';
-    nextButton.style.display = currentImageIndex < galleryImages.length - 1 ? 'flex' : 'none';
+    // Always show navigation buttons (they will loop around)
+    prevButton.style.display = 'flex';
+    nextButton.style.display = 'flex';
     
     // Trigger fade in animation
     setTimeout(() => {
@@ -302,15 +309,19 @@ function updateLightboxImage() {
 function showPrevImage() {
     if (currentImageIndex > 0) {
         currentImageIndex--;
-        updateLightboxImage();
+    } else {
+        currentImageIndex = galleryImages.length - 1; // Loop to last image
     }
+    updateLightboxImage();
 }
 
 function showNextImage() {
     if (currentImageIndex < galleryImages.length - 1) {
         currentImageIndex++;
-        updateLightboxImage();
+    } else {
+        currentImageIndex = 0; // Loop to first image
     }
+    updateLightboxImage();
 }
 
 function closeLightbox() {
